@@ -13,11 +13,16 @@
 
     {{-- Jquery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         crossorigin="anonymous" />
 
+
+    {{-- GSAP --}}
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
     @yield('head')
 
 </head>
@@ -31,10 +36,10 @@
     });
 </script>
 
-<body>
+<body class="bg-[#f4f4e7]">
     @include('partials.loader')
+    <div class="container overflow-hidden fixed z-0 w-full h-auto">
     <!-- Include navbar disini -->
-    <div class="flex-1 overflow-hidden relative z-0 w-full h-auto">
         @yield('content')
     </div>
     <!-- Include footer disini -->
