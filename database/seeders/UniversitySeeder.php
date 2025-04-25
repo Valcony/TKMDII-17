@@ -36,6 +36,7 @@ class UniversitySeeder extends Seeder
             ['name' => 'Institut Teknologi Sepuluh November (ITS)', 'liaison_id' => $liaisons['Sharon Tiffany']->id, 'type' => 0],
             ['name' => 'Institut Seni Indonesia Denpasar', 'liaison_id' => $liaisons['Freya So']->id, 'type' => 0],
             ['name' => 'Institut Desain dan Bisnis (IDB Bali)', 'liaison_id' => $liaisons['Dillon Ivanandrew Prasetya']->id, 'type' => 0],
+            ['name' => 'Universitas Kristen Petra', 'liaison_id' => $liaisons['Sharon Tiffany']->id, 'type' => 0],
 
             // **Peninjau**
             ['name' => 'Universitas Sahid Surakarta', 'liaison_id' => $liaisons['Sharon Tiffany']->id, 'type' => 1],
