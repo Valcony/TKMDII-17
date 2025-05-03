@@ -23,6 +23,23 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+
+    <style>
+        /* Effect supaya texture jadi overlay */
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-repeat: repeat;
+            background-image: url({{ asset('overlay/paper.png') }});
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            z-index: 99999;
+            opacity: 50%;
+        }
+    </style>
     @yield('head')
 
 </head>
@@ -39,9 +56,10 @@
 <body class="bg-[#f4f4e7]">
     @include('partials.loader')
     <div class="container overflow-hidden fixed z-0 w-full h-auto">
-    <!-- Include navbar disini -->
+        <!-- Include navbar disini -->
         @yield('content')
     </div>
+
     <!-- Include footer disini -->
 </body>
 @yield('script')
