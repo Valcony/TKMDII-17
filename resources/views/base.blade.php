@@ -108,11 +108,14 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
+            width: 100%;
+            height: 100%;
+            /* display: flex; */
+            justify-items: center;
             justify-content: center;
             align-items: center;
+            overflow-x: hidden;
+            overflow-y: scroll;
             background: #f4f4e7;
         }
 
@@ -124,7 +127,7 @@
         }
 
         .font-primary {
-                font-family: 'Soon-Poster', sans-serif;
+            font-family: 'Soon-Poster', sans-serif;
         }
     </style>
     @yield('head')
