@@ -1,8 +1,8 @@
-@extends('base')
-@section('content')
+
     <style>
         .trapezoid-container {
-            --trapezoid-color: #dcd6ba;
+            /* --trapezoid-color: #dcd6ba; */
+            --trapezoid-color: transparent;
             --trapezoid-clip: polygon(0% 5%, 100% 0%, 100% 100%, 0% 95%);
 
             background-color: var(--trapezoid-color);
@@ -92,7 +92,7 @@
     </style>
 
     <div style="padding: clamp(1em, 3vw, 2em) 0;"
-        class="trapezoid-container relative flex w-[120vw] overflow-hidden flex flex-col justify-center items-center">
+        class="trapezoid-container relative flex w-[100%] overflow-hidden flex flex-col justify-center items-center">
         <div data-aos="fade-up" data-aos-duration="800"
             class="z-[9] w-[120vw] h-[80%] overflow-x-hidden flex justify-center items-center trapezoid-container -rotate-3"
             style="--trapezoid-color: #4ba663; --trapezoid-clip: polygon(0% 0%, 100% 2%, 100% 97%, 0% 100%);">
@@ -235,4 +235,3 @@
             });
         });
     </script>
-@endsection

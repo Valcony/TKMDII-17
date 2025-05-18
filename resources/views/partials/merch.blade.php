@@ -9,13 +9,12 @@
         background-image: url({{ asset('overlay/halftone.png') }});
         mix-blend-mode: multiply;
         pointer-events: none;
-        z-index: 99999;
+        z-index: 0;
         opacity: 50%;
     }
 </style>
-<div class="w-full h-auto">
+<div class="relative w-full h-auto mt-10">
     <div class="overlay7"></div>
-
     <div class="relative flex justify-center items-center">
         <img src="{{ asset('assets/merch1.png') }}" alt="Background Image" class="absolute z-0 max-w-full">
         <img src="{{ asset('assets/merch3.png') }}" alt="Foreground Image" class="relative z-10 max-w-[50%]">
