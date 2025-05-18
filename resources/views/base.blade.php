@@ -25,6 +25,13 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
 
     <style>
+        :root {
+            --blue: #4ca6f8;
+            --yellow: #efe650;
+            --pink: #e74893;
+            --green: #4ba663;
+        }
+
         /* Effect supaya texture jadi overlay */
         .overlay1 {
             position: absolute;
@@ -38,6 +45,29 @@
             pointer-events: none;
             z-index: 99999;
             opacity: 50%;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f4f4e7;
+        }
+
+        @font-face {
+            font-family: 'Soon-Poster';
+            src: url('{{ asset('font/1797/1797-MEDIUM.otf') }}') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .font-primary {
+                font-family: 'Soon-Poster', sans-serif;
         }
     </style>
     @yield('head')
@@ -55,7 +85,7 @@
 
 <body class="bg-[#f4f4e7]">
     @include('partials.loader')
-    <div class="container overflow-hidden fixed z-0 w-full h-auto">
+    <div class="container overflow-hidden fixed w-full h-auto">
         <!-- Include navbar disini -->
         @yield('content')
     </div>

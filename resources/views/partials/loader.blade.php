@@ -42,6 +42,7 @@
     .loader {
         position: fixed;
         display: flex;
+        justify-items: center;
         justify-content: center;
         align-items: center;
         left: 0;
@@ -99,18 +100,6 @@
         }
     }
 
-
-    .container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #f4f4e7;
-    }
     .fade {
         animation: fadeOut 1.5s ease forwards infinite;
     }

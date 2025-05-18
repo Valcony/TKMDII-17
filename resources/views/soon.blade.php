@@ -28,7 +28,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <style>
-        /* Load custom font */
         @font-face {
             font-family: 'Soon';
             src: url('{{ asset('font/1797/1797-SIGNAGE.otf') }}') format('opentype');
@@ -117,7 +116,6 @@
             });
         }
 
-        // Fungsi ini akan split dan animasi
         function animateText() {
             // Set plain text dulu
             textContainer.textContent = text;
