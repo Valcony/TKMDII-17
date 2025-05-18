@@ -5,6 +5,6 @@
 @endsection
 
 @section('head')
-
+<div></div>
 
 @endsection
