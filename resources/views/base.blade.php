@@ -103,6 +103,29 @@
         .font-primary {
             font-family: 'Soon-Poster', sans-serif;
         }
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f4f4e7;
+        }
+
+        @font-face {
+            font-family: 'Soon-Poster';
+            src: url('{{ asset('font/1797/1797-MEDIUM.otf') }}') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .font-primary {
+                font-family: 'Soon-Poster', sans-serif;
+        }
     </style>
     @yield('head')
 
