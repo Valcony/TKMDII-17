@@ -19,14 +19,52 @@
         crossorigin="anonymous" />
 
 
+    {{-- AOS --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
     {{-- GSAP --}}
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
 
     <style>
+        :root {
+            --blue: #4ca6f8;
+            --yellow: #efe650;
+            --pink: #e74893;
+            --green: #4ba663;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: #dcd6ba;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--blue);
+            /* border-radius: 5px; */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--pink);
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
         /* Effect supaya texture jadi overlay */
-        .overlay1 {
+        /* .overlay1 {
             position: absolute;
             top: 0;
             bottom: 0;
@@ -38,6 +76,32 @@
             pointer-events: none;
             z-index: 99999;
             opacity: 50%;
+        } */
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* display: flex; */
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            background: #f4f4e7;
+        }
+
+        @font-face {
+            font-family: 'Soon-Poster';
+            src: url('{{ asset('font/1797/1797-MEDIUM.otf') }}') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .font-primary {
+            font-family: 'Soon-Poster', sans-serif;
         }
     </style>
     @yield('head')
@@ -55,7 +119,7 @@
 
 <body class="bg-[#f4f4e7]">
     @include('partials.loader')
-    <div class="container overflow-hidden fixed z-0 w-full h-auto">
+    <div class="container">
         <!-- Include navbar disini -->
         @yield('content')
     </div>
