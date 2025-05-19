@@ -3,6 +3,7 @@
     <style>
         .event-image-container {
             position: relative;
+            /* background-color: var(--yellow); */
         }
 
         .event-overlay {
@@ -156,6 +157,8 @@
         .event-image {
             width: 80%;
             transition: all 0.5s ease;
+            object-fit: cover;
+            background-color: var(--yellow);
         }
 
         .event-card:hover .event-image,
@@ -438,10 +441,24 @@
             background: linear-gradient(90deg, transparent, rgba(76, 248, 91, 0.8), transparent);
 
         }
+        .overlay {
+            position: absolute;
+            object-fit: contain;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-repeat: repeat;
+            background-image: url({{ asset('overlay/paper2.png') }});
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 50%;
+        }
     </style>
 
 
-    <div class="w-screen h-screen min-h-screen flex flex-col justify-center items-center py-8 px-4 md:px-8">
+    <div class="w-screen h-screen min-h-screen flex flex-col justify-center items-center py-8 px-4 md:px-8 bg-[var(--green)]">
         <h1 id="ourEvents"
             class="text-[#efe650] w-full z-10 text-center text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 lg:mb-16">
             OUR EVENTS
@@ -514,6 +531,7 @@
             </div>
         </div>
     </div>
+    <div class="overlay"></div>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
