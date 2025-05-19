@@ -31,8 +31,6 @@
 
 
 <style>
-
-
     .loader {
         position: fixed;
         display: flex;
@@ -109,10 +107,12 @@
 <script>
     document.addEventListener("DOMContentLoaded", (event) => {
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+        const startTime = performance.now();
+        const baseDelay = Math.min(1000, startTime);
+        const gsapDelay = baseDelay/1000;
         setTimeout(() => {
             document.querySelector('.svg').classList.add('fade');
-
-        }, 2000);
+        }, baseDelay);
         gsap.fromTo(
             ".container",
             {
@@ -120,7 +120,7 @@
                 left: "100%",
                 scale: 0.5,
                 ease: "power4.inOut",
-                delay: 2
+                delay: gsapDelay
             },
             {
                 duration: 2,
@@ -128,24 +128,31 @@
                 scale: 0.5,
                 transform: "translateX(-50%)",
                 ease: "power4.inOut",
-                delay: 2
+                delay: gsapDelay
             }
         );
 
-  
+
 
         gsap.to(".loader", 2.5, {
             scale: 0,
             ease: "power4.inOut",
-            delay: 4
+            delay: 2
         });
 
         gsap.to(".container", 2, {
             scale: 1,
             ease: "power4.inOut",
-            delay: 4.5
+            delay: 2.5
         });
-
+        gsap.delayedCall(3, () => {
+        AOS.init({
+            once: false,
+            mirror: true,
+            offset: 120,
+            easing: 'ease-in-out'
+        });
+    });
     });
 
 
