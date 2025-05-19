@@ -4,7 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title }} | TKMDII 17</title>
+    <title>{{ $title }} | TKMDII XVII</title>
+    <meta name="description"
+        content="Temu Karya Mahasiswa Desain Interior Indonesia XVII @ Petra Christian University (PCU)">
+    <meta name="keywords"
+        content="TKMDII, Desain Interior, Temu Karya Mahasiswa Desain Interior Indonesia, TKMDII XVII, TKMDII 17">
+    <link rel="canonical" href="https://tkmdii.petra.ac.id/">
+
+    <meta property="og:title" content="TKMDII XVII @ Petra Christian University">
+    <meta property="og:description"
+        content="Temu Karya Mahasiswa Desain Interior Indonesia XVII @ Petra Christian University (PCU)">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tkmdii.petra.ac.id/">
+    <meta property="og:site_name" content="TKMDII XVII">
+
+
+
     {{-- Tailwind --}}
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -153,5 +168,33 @@
     <!-- Include footer disini -->
 </body>
 @yield('script')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "TKMDII XVII @ Petra Christian University",
+  "description": "Temu Karya Mahasiswa Desain Interior Indonesia XVII @ Petra Christian University (PCU)",
+  "url": "https://tkmdii.petra.ac.id/",
+  "startDate": "2025-11-10", 
+  "endDate": "2025-11-10",    
+  "location": {
+    "@type": "Place",
+    "name": "Petra Christian University",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Siwalankerto 121-131",
+      "addressLocality": "Surabaya",
+      "addressRegion": "Jawa Timur",
+      "postalCode": "60236",
+      "addressCountry": "ID"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Petra Christian University",
+    "url": "https://www.petra.ac.id"
+  }
+}
+</script>
 
 </html>
