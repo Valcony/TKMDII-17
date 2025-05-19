@@ -458,7 +458,7 @@
     </style>
 
 
-    <div class="w-screen h-screen min-h-screen flex flex-col justify-center items-center py-8 px-4 md:px-8 bg-[var(--green)]">
+    <div class=" w-screen h-screen min-h-screen flex flex-col justify-center items-center py-8 px-4 md:px-8 bg-[var(--green)]">
         <h1 id="ourEvents"
             class="text-[#efe650] w-full z-10 text-center text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 lg:mb-16">
             OUR EVENTS

@@ -17,6 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tkmdii.petra.ac.id/">
     <meta property="og:site_name" content="TKMDII XVII">
+    
 
 
 
@@ -54,7 +55,7 @@
 
         /* Scrollbar */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 8px;
             background-color: #dcd6ba;
         }
 
