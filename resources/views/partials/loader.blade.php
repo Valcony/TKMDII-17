@@ -1,4 +1,4 @@
-<div class="loader">
+{{-- <div class="loader">
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500px" height="500px" version="1.1"
         viewBox="0 0 2380 2380" preserveAspectRatio="xMinYMin"
         class="shape-rendering:geometricPrecisio justify-center items-center fill-rule:evenodd; clip-rule:evenodd">
@@ -167,4 +167,4 @@
 
 
 
-</script>
+</script> --}}

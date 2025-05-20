@@ -55,8 +55,9 @@
 
 <body class="bg-[#f4f4e7]">
     @include('partials.loader')
-    <div class="container overflow-hidden fixed z-0 w-full h-auto">
+    <div class="container flex-col overflow-hidden fixed z-0 w-full h-auto">
         <!-- Include navbar disini -->
+
         @yield('content')
     </div>
 
