@@ -138,7 +138,7 @@
         <div class="z-[11] w-full relative">
             <div class="flex justify-center items-center absolute right-5">
                 <a href="{{ route('ourEvents') }}"
-                    class="moreEvents cursor-pointer bg-[#efe650] text-[#4ca6f8] font-bold px-2 py-1 gsap-button"
+                    class="moreEvents magnetic cursor-pointer bg-[#efe650] text-[#4ca6f8] font-bold px-2 py-1 gsap-button"
                     style="padding: 0px 2px 0px 2px">SEE MORE</a>
             </div>
         </div>

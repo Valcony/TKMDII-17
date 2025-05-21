@@ -144,13 +144,10 @@
              }
          }
      </style>
- @endsection
 
- @section('content')
      <section class="landing-page">
-         @include('partials.navbar')
-         <img src="{{ asset('img/BEYOND BOUNDARIES.PNG') }}" alt="Beyond Boundaries" class="center-image">
-         <img src="{{ asset('img/logo.png') }}" alt="Overlay Logo" class="overlay-logo">
+         <img src="{{ asset('img/BEYOND BOUNDARIES.PNG') }}" alt="Beyond Boundaries" class="center-image lg:px-0 px-0">
+         <img src="{{ asset('img/logo.png') }}" alt="Overlay Logo" class="overlay-logo lg:px-0 px-12">
      </section>
 
 
@@ -187,7 +184,7 @@
          </div>
      </section>
 
- @section('script')
+
      <script>
          var swiper = new Swiper(".mySwiper", {
              pagination: {

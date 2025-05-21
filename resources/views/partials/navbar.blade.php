@@ -9,9 +9,20 @@
         transition: all 0.3s ease;
     }
 
+    @media (hover: hover) {
+    .nav-link:hover {
+        color: #e74893 !important;
+    }
+}
+
+@media (hover: none) {
+    .nav-link:hover {
+        color: #efe650 !important;
+    }
+}
     .nav-link:hover {
         background-color: #efe650;
-        color: #e74893;
+        /* color: #efe650; */
         text-shadow: none;
         padding: 2px 10px;
         font-weight: bold;
@@ -21,6 +32,50 @@
 
     #menu-btn {
         cursor: pointer;
+    }
+
+    #nav-menu a {
+        position: relative;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    #nav-menu.active a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Staggered animation delay for each link */
+    #nav-menu a:nth-child(1) { transition-delay: 0.1s; }
+    #nav-menu a:nth-child(2) { transition-delay: 0.2s; }
+    #nav-menu a:nth-child(3) { transition-delay: 0.3s; }
+    #nav-menu a:nth-child(4) { transition-delay: 0.4s; }
+    #nav-menu a:nth-child(5) { transition-delay: 0.5s; }
+    #nav-menu a:nth-child(6) { transition-delay: 0.6s; }
+    
+    /* Block reveal animation */
+    #nav-menu a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #e74893;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease;
+        z-index: -2;
+    }
+    
+    #nav-menu a:hover:before {
+        transform: scaleX(1);
+    }
+    
+    
+    #nav-menu.active:after {
+        opacity: 1;
     }
 </style>
 
@@ -63,6 +118,9 @@
         const menu = document.getElementById('nav-menu');
         const icon = document.getElementById('menu-icon');
         menu.classList.toggle('hidden');
+        setTimeout(() => {
+            menu.classList.toggle('active');
+        }, 10);
 
         if (menu.classList.contains('hidden')) {
             // Show hamburger icon
@@ -80,6 +138,7 @@
     function closeMenu() {
         const menu = document.getElementById('nav-menu');
         const icon = document.getElementById('menu-icon');
+         menu.classList.remove('active');
         menu.classList.add('hidden');
         // Reset icon to hamburger
         icon.innerHTML = `
