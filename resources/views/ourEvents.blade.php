@@ -534,6 +534,95 @@
     <div class="overlay"></div>
 
     <script>
+        function setupEventAnimations() {
+            const eventItems = document.querySelectorAll('.acara');
+
+            eventItems.forEach((item, index) => {
+                const background = item.querySelector('.acara-bg');
+                const contentContainer = item.querySelector('.isiAcara');
+                const title = item.querySelector('.acara-title');
+
+                const textWidth = eventItems.offsetWidth;
+
+                const tl = gsap.timeline({
+                    paused: true
+                });
+
+                const hasRightToLeft = background.classList.contains('translate-x-full');
+
+                if (hasRightToLeft) {
+                    tl.to(background, {
+                        duration: 0.5,
+                        x: 0,
+                        width: textWidth + "px",
+                        opacity: 0.75,
+                        ease: "power2.out"
+                    });
+                } else {
+                    tl.to(background, {
+                        duration: 0.5,
+                        x: 0,
+                        width: textWidth + "px",
+                        opacity: 0.75,
+                        ease: "power2.out"
+                    });
+                }
+
+                tl.to(title, {
+                    duration: 0.3,
+                    scale: 1.05,
+                    color: "#000000",
+                    ease: "power1.out"
+                }, "-=0.3");
+
+                item.addEventListener('mouseenter', () => {
+                    if (!isActive) {
+                        tl.play();
+                        setTimeout(() => {
+                            if (!isActive) tl.reverse();
+                        }, 1500);
+                    }
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    if (!isActive) {
+                        tl.reverse();
+                    }
+                });
+
+                let isActive = false;
+                item.addEventListener('click', () => {
+                    if (isActive) {
+                        tl.reverse();
+                        isActive = false;
+                    } else {
+                        tl.play();
+                        isActive = true;
+                    }
+                });
+
+                ScrollTrigger.create({
+                    // markers: true,
+                    trigger: item,
+                    start: "bottom top",
+                    scroller: '.main-container',
+                    onEnter: () => {
+
+                        if (!isActive) {
+                            tl.play();
+                            setTimeout(() => {
+                                if (!isActive) tl.reverse();
+                            }, 1500);
+                        }
+                    },
+                    onLeaveBack: () => {
+                        if (!isActive) {
+                            tl.reverse();
+                        }
+                    }
+                });
+            });
+        }
         document.addEventListener("DOMContentLoaded", () => {
 
             if (typeof gsap !== 'undefined') {
