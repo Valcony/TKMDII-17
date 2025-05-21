@@ -6,7 +6,6 @@
 @endsection
 @section('content')
     <!-- Include tiap part section homepage disini -->
-
     @include('partials.events')
     @include('partials.timeline')
     @include('partials.merch')

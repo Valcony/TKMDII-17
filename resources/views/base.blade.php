@@ -18,9 +18,6 @@
     <meta property="og:url" content="https://tkmdii.petra.ac.id/">
     <meta property="og:site_name" content="TKMDII XVII">
     
-
-
-
     {{-- Tailwind --}}
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -31,8 +28,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" /> -->
 
 
     {{-- AOS --}}
@@ -125,32 +122,6 @@
         .font-primary {
             font-family: 'Soon-Poster', sans-serif;
         }
-
-        .container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* display: flex; */
-            justify-items: center;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            background: #f4f4e7;
-        }
-
-        @font-face {
-            font-family: 'Soon-Poster';
-            src: url('{{ asset('font/1797/1797-MEDIUM.otf') }}') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        .font-primary {
-            font-family: 'Soon-Poster', sans-serif;
-        }
     </style>
     @yield('head')
 
@@ -164,8 +135,8 @@
         });
     });
 </script>
-
-<body class="bg-[#f4f4e7]">
+@include('cursor')
+<body class="bg-[#f4f4e7]" oncontextmenu="return false;">
     @include('partials.loader')
     <div class="container">
         <!-- Include navbar disini -->
