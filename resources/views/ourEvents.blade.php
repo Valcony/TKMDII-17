@@ -76,24 +76,6 @@
             }
         }
 
-        #ourEvents {
-
-            text-shadow: 2px 0px 0px #4ca6f8;
-
-            transition: all 0.3s ease-in-out;
-
-        }
-
-        #ourEvents:hover {
-
-            text-shadow: 3px 1px 0px #4ca6f8;
-
-            transform: translateY(-2px) scale(1.05);
-
-            transition: all 0.3s ease-in-out;
-
-        }
-
         .event-card {
             width: 100%;
             height: 450px;
@@ -106,29 +88,19 @@
             background-color: white;
         }
 
-
-
         @media (max-width: 640px) {
-
             .event-card {
                 height: 400px;
                 max-width: 100%;
             }
-
         }
 
-
-
         @media (min-width: 641px) and (max-width: 1024px) {
-
             .event-card {
                 height: 420px;
                 max-width: 300px;
             }
-
         }
-
-
 
         .event-card:hover,
         .event-card.active {
@@ -149,7 +121,7 @@
             align-items: center;
         }
 
-        .event-card:hover .event-image-container,
+        /* Block reveal effect - keeps height at 40% when active until deactivated */
         .event-card.active .event-image-container {
             height: 40%;
         }
@@ -171,275 +143,160 @@
         }
 
         .event-content {
-
             position: absolute;
-
             bottom: 0;
-
             left: 0;
-
             width: 100%;
-
             height: 0;
-
             padding: 20px;
-
             opacity: 0;
-
             transition: all 0.5s ease;
-
             background-color: white;
-
             overflow: hidden;
-
         }
 
-
-
-        .event-card:hover .event-content,
-
+        /* Block reveal - keeps content area visible when active until deactivated */
         .event-card.active .event-content {
-
             height: 60%;
-
             opacity: 1;
-
         }
-
-
 
         @media (hover: none) {
-
             .event-card .event-image-container {
-
                 height: 50%;
-
             }
-
-
 
             .event-card .event-content {
-
                 height: 50%;
-
                 opacity: 1;
-
             }
-
         }
-
-
 
         .event-title {
-
             font-size: 1.5rem;
-
             font-weight: bold;
-
             margin-bottom: 10px;
-
             text-align: center;
-
             color: #333;
-
             position: relative;
-
             display: inline-block;
-
             padding-bottom: 8px;
-
             width: 100%;
-
         }
-
-
 
         .underlineText {
-
             position: absolute;
-
             bottom: 0;
-
             left: 50%;
-
             transform: translateX(-50%);
-
             height: 3px;
-
             width: 0;
-
             background-color: #4ca6f8;
-
             border-radius: 1.5px;
-
             transition: width 0.5s ease;
-
             overflow: hidden;
-
         }
 
-
+        /* Persistent underline effect for active cards */
+        .event-card.active .underlineText {
+            width: 60%;
+        }
 
         .underlineText::after {
-
             content: '';
-
             position: absolute;
-
             top: 0;
-
             left: 0;
-
             width: 100%;
-
             height: 100%;
-
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-
             transform: translateX(-100%);
-
         }
 
-
-
-        .event-card:hover .underlineText::after {
-
+        .event-card:hover .underlineText::after,
+        .event-card.active .underlineText::after {
             animation: shimmer 2s infinite;
-
         }
-
-
 
         @keyframes shimmer {
-
             100% {
-
                 transform: translateX(100%);
-
             }
-
         }
-
-
 
         @media (max-width: 640px) {
-
             .event-title {
-
                 font-size: 1.25rem;
-
             }
-
         }
-
-
 
         .event-description {
-
             font-size: 1rem;
-
             color: #666;
-
             line-height: 1.5;
-
         }
-
-
 
         @media (max-width: 640px) {
-
             .event-description {
-
                 font-size: 0.9rem;
-
                 line-height: 1.4;
-
             }
-
         }
-
-
 
         .image-fade {
-
             opacity: 0;
-
             transition: opacity 0.5s ease;
-
         }
-
-
 
         .event-cards-container {
-
-            padding: 1.5em;
-
+            padding: 0.5rem;
         }
-
-
-
-
 
         @media (hover: none) {
-
             .event-card .event-image-container {
-
                 height: 100%;
-
             }
-
-
 
             .event-card .event-content {
-
                 height: 0;
-
                 opacity: 0;
-
             }
-
-
 
             .event-card.active .event-image-container {
-
                 height: 40%;
-
             }
-
-
 
             .event-card.active .event-content {
-
                 height: 60%;
-
                 opacity: 1;
-
             }
-
         }
-
-
 
         .event-card[data-event-type="Kbb"] .underlineText::after {
-
-            background: linear-gradient(90deg, transparent, rgba(76, 166, 248, 0.8), transparent);
-
+            background: linear-gradient(90deg, transparent, #4ca6f8, transparent);
         }
-
-
 
         .event-card[data-event-type="Kbd"] .underlineText::after {
-
-            background: linear-gradient(90deg, transparent, rgba(248, 76, 76, 0.8), transparent);
-
+            background: linear-gradient(90deg, transparent, #e74893, transparent);
         }
 
-
-
         .event-card[data-event-type="Kbs"] .underlineText::after {
+            background: linear-gradient(90deg, transparent, #4ba663, transparent);
+        }
 
-            background: linear-gradient(90deg, transparent, rgba(76, 248, 91, 0.8), transparent);
+        .main-container {
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
+            background-color: #4ba663;
+            position: relative;
+            padding: 1rem 1.5em;
+        }
 
+        .content-wrapper {
+            min-height: 100%;
+            width: 100%;
+            height: 100%;
         }
         .overlay {
             position: absolute;
@@ -457,34 +314,183 @@
         }
     </style>
 
+    <div class="main-container mix-blend-darken">
+        <div class="content-wrapper">
+            <div class="relative w-full h-[40%] z-10 flex justify-center items-center overflow-hidden">
+                <img class="absolute top-0 left-0 w-full h-full object-full mix-blend-overlay"
+                    src="{{ asset('events/Texture.webp') }}" alt="Texture" />
+                <img style="padding: 0.5rem;" class="absolute top-0 left-0 w-full h-full object-fill mix-blend-multiply"
+                    src="{{ asset('events/eventTitle.webp') }}" alt="Event Title" />
+            </div>
 
-    <div class=" w-screen h-screen min-h-screen flex flex-col justify-center items-center py-8 px-4 md:px-8 bg-[var(--green)]">
-        <h1 id="ourEvents"
-            class="text-[#efe650] w-full z-10 text-center text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 lg:mb-16">
-            OUR EVENTS
-        </h1>
+            <div class="w-full z-10 flex justify-center items-center">
+                <img style="padding: 0.5rem;" class="object-cover" src="{{ asset('events/tkmdiixvii.webp') }}"
+                    alt="Texture">
+            </div>
 
-        <div class="flex justify-center items-start landscape:items-start sm:items-center w-full h-[90%] overflow-y-auto">
-            <div
-                class="event-cards-container grid grid-cols-12 w-full max-w-7xl justify-center md:justify-evenly items-center gap-4 md:gap-6 lg:gap-8">
+            <div class="flex justify-center items-start landscape:items-start sm:items-center w-full">
+                <div
+                    class="event-cards-container grid grid-cols-12 w-full max-w-7xl justify-center md:justify-evenly items-center gap-4 md:gap-6 lg:gap-8">
 
-                <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbb">
-                    <div class="event-image-container">
-                        <img class="event-image" src="{{ asset('assets/events/Kbb.webp') }}" alt="Kbb Event">
-                        <div class="event-overlay">
-                            <div class="event-overlay-icon"></div>
-                            <p class="event-overlay-text">Click to view details</p>
+                    <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbb">
+                        <div class="event-image-container">
+                            <img class="event-image" src="{{ asset('events/Kbb.webp') }}" alt="Kbb Event">
+                            <div class="event-overlay">
+                                <div class="event-overlay-icon"></div>
+                                <p class="event-overlay-text">Click to view details</p>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">KBB
+                                <span class="underlineText"></span>
+                            </h3>
+                            <p class="event-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis,
+                                felis eu pharetra fermentum, magna risus commodo libero, ac finibus nisi
+                                ipsum vel arcu. Proin aliquet, nunc eu feugiat tincidunt.
+                            </p>
                         </div>
                     </div>
-                    <div class="event-content">
-                        <h3 class="event-title">KBB
-                            <span class="underlineText"></span>
-                        </h3>
-                        <p class="event-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis,
-                            felis eu pharetra fermentum, magna risus commodo libero, ac finibus nisi
-                            ipsum vel arcu. Proin aliquet, nunc eu feugiat tincidunt.
-                        </p>
+
+                    <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbd">
+                        <div class="event-image-container">
+                            <img class="event-image" src="{{ asset('events/Kbd.webp') }}" alt="Kbd Event">
+                            <div class="event-overlay">
+                                <div class="event-overlay-icon"></div>
+                                <p class="event-overlay-text">Click to view details</p>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">KBD
+                                <span class="underlineText"></span>
+                            </h3>
+                            <p class="event-description">
+                                Suspendisse potenti. Ut vel orci eleifend, rutrum felis at, faucibus nisi.
+                                Cras pharetra sapien at sem vulputate, nec eleifend tortor finibus.
+                                Vivamus in luctus nulla, id cursus risus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbs">
+                        <div class="event-image-container">
+                            <img class="event-image" src="{{ asset('events/Kbs.webp') }}" alt="Kbs Event">
+                            <div class="event-overlay">
+                                <div class="event-overlay-icon"></div>
+                                <p class="event-overlay-text">Click to view details</p>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">KBS
+                                <span class="underlineText"></span>
+                            </h3>
+                            <p class="event-description">
+                                Etiam convallis, magna eu volutpat efficitur, ex est finibus nisl,
+                                vel congue nisi ipsum in tortor. Vivamus feugiat hendrerit purus,
+                                vitae tincidunt mi molestie id.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="eventsSection"
+                class="text-white !py-[0.5rem] h-auto min-h-[100%] rounded-lg relative z-10 overflow-hidden justify-between flex flex-row-reverse">
+                <div
+                    class="flex justify-center items-center w-full lg:min-w-[30%] md:max-w-[40%] h-auto min-h-[100%] md:flex hidden landscape:hidden lg:landscape:flex">
+
+                    <div
+                        class="z-[50] justify-center items-center w-full h-[90%] opacity-100 pointer-events-none hidden md:flex">
+                        <img src="{{ asset('events/tanaman.png') }}" alt="Decorative Plants"
+                            class="w-[80%] lg:w-[80%] md:w-[110%] h-full min-h-[80%]">
+                    </div>
+
+                </div>
+                <div class="space-y-12 md:max-w-[55%] landscape:max-w-[100%]">
+                    <div
+                        class="acara flex flex-col md:flex-row gap-12 relative !p-4 transition-all duration-300 cursor-pointer overflow-hidden">
+                        <div
+                            class="acara-bg absolute inset-0 bg-[#efe650] rounded-l-2xl opacity-0 transform translate-x-full">
+                        </div>
+
+                        <div class="isiAcara md:w-3/4 relative z-10">
+                            <h2
+                                class="acara-title text-2xl font-bold relative inline-block mb-4 pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white">
+                                CONGRESS DELEGATION
+                            </h2>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="acara flex flex-col md:flex-row gap-12 relative !p-4 transition-all duration-300 cursor-pointer overflow-hidden">
+                        <div
+                            class="acara-bg absolute inset-0 bg-[#e74893] rounded-r-2xl opacity-0 transform -translate-x-full">
+                        </div>
+
+                        <div class="isiAcara md:w-3/4 relative z-10">
+                            <h2
+                                class="acara-title text-2xl font-bold relative inline-block mb-4 pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white">
+                                GUEST LECTURE
+                            </h2>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="acara flex flex-col md:flex-row gap-12 relative !p-4 transition-all duration-300 cursor-pointer overflow-hidden">
+                        <div
+                            class="acara-bg absolute inset-0 bg-[#4ca6f8] rounded-r-2xl opacity-0 transform -translate-x-full">
+                        </div>
+
+                        <div class="isiAcara md:w-3/4 relative z-10">
+                            <h2
+                                class="acara-title text-2xl font-bold relative inline-block mb-4 pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white">
+                                SEMINAR
+                            </h2>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="acara flex flex-col md:flex-row gap-12 relative !p-4 transition-all duration-300 cursor-pointer overflow-hidden">
+                        <div
+                            class="acara-bg absolute inset-0 bg-[#efe650] rounded-l-2xl opacity-0 transform translate-x-full">
+                        </div>
+
+                        <div class="isiAcara md:w-3/4 relative z-10">
+                            <h2
+                                class="acara-title text-2xl font-bold relative inline-block mb-4 pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white">
+                                INDUSTRY WORKSHOP
+                            </h2>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="acara flex flex-col md:flex-row gap-12 relative !p-4 transition-all duration-300 cursor-pointer overflow-hidden">
+                        <div
+                            class="acara-bg absolute inset-0 bg-[#e74893] rounded-r-2xl opacity-0 transform -translate-x-full">
+                        </div>
+
+                        <div class="isiAcara md:w-3/4 relative z-10">
+                            <h2
+                                class="acara-title text-2xl font-bold relative inline-block mb-4 pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white">
+                                FIELD TRIP
+                            </h2>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -529,6 +535,7 @@
                 </div>
 
             </div>
+
         </div>
     </div>
     <div class="overlay"></div>
@@ -628,16 +635,6 @@
             if (typeof gsap !== 'undefined') {
                 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-                gsap.fromTo("#ourEvents", {
-                    y: -50,
-                    opacity: 0
-                }, {
-                    y: 0,
-                    opacity: 1,
-                    duration: 1,
-                    ease: "power2.out"
-                });
-
                 gsap.fromTo(".event-card", {
                     y: 50,
                     opacity: 0
@@ -656,6 +653,43 @@
                 setupEventCardsInteractions();
                 initializeUnderlines();
             }
+            setupEventAnimations();
+            const eventItems = document.querySelectorAll('.acara');
+
+            eventItems.forEach((item) => {
+                const tl = gsap.timeline({
+                    paused: true
+                });
+
+                const background = item.querySelector('.acara-bg');
+
+                tl.to(background, {
+                    duration: 0.5,
+                    x: 0,
+                    opacity: 0.75,
+                    ease: "power2.out"
+                });
+
+                item.addEventListener('mouseenter', () => {
+                    tl.play();
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    tl.reverse();
+                });
+
+                let isActive = false;
+
+                item.addEventListener('click', () => {
+                    if (isActive) {
+                        tl.reverse();
+                        isActive = false;
+                    } else {
+                        tl.play();
+                        isActive = true;
+                    }
+                });
+            });
 
             function setupEventCardsInteractions() {
                 const eventCards = document.querySelectorAll('.event-card');
@@ -679,15 +713,13 @@
                     card.addEventListener('click', () => {
                         if (!isActive) {
                             activateCard(card);
-                            isActive =
-                                true;
+                            isActive = true;
                         }
                     });
                     card.addEventListener('mouseenter', () => {
                         if (!isActive) {
                             activateCard(card);
-                            isActive =
-                                true;
+                            isActive = true;
                         }
                     });
 

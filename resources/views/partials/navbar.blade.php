@@ -172,7 +172,7 @@
         const container = document.querySelector(".container");
         container.addEventListener("scroll", function () {
             const scrollPosition = container.scrollTop;
-            console.log("Scroll position:", scrollPosition);
+            // console.log("Scroll position:", scrollPosition);
 
             if (scrollPosition > 50) {
                 navbar.classList.add("bg-[#1a1a1a]/10", "backdrop-blur-sm");
