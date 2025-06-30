@@ -13,17 +13,17 @@
         opacity: 50%;
     }
 </style>
-<div class="relative w-full h-auto mt-10">
+<div class="relative w-full h-auto">
     <div class="overlay7"></div>
     <div class="relative flex justify-center items-center">
         <img src="{{ asset('assets/merch1.png') }}" alt="Background Image" class="absolute z-0 max-w-full">
         <img src="{{ asset('assets/merch3.png') }}" alt="Foreground Image" class="relative z-10 max-w-[50%]">
-        <div class="absolute z-20 items-center flex flex-col gap-6">
-            <p
-                class="merch w-[80%] h-[120%] lg:text-8xl sm:text-6xl text-center font-primary text-[var(--yellow)] bg-[var(--blue)] inline-block">
+        <div class="absolute z-20 items-center flex flex-col lg:gap-6">
+            <p data-aos="zoom-out"
+                class="merch w-[80%] h-[120%] lg:text-8xl text-4xl text-center font-primary text-[var(--yellow)] bg-[var(--blue)] inline-block">
                 MERCH</p>
-            <p
-                class="coming-soon rotate-3 w-[120%] h-[120%] lg:text-8xl sm:text-6xl text-center font-primary text-[var(--pink)] bg-[var(--yellow)] inline-block">
+            <p data-aos="zoom-out" data-aos-offset="500"
+                class="coming-soon rotate-3 w-[120%] h-[120%] lg:text-8xl text-4xl text-center font-primary text-[var(--pink)] bg-[var(--yellow)] inline-block">
                 COMING SOON</p>
         </div>
     </div>
