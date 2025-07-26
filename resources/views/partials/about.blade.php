@@ -164,11 +164,20 @@
         background-color: #efe650;
         border-radius: 8px;
     }
+
+    
 </style>
 
-<section class="landing-page -mt-20" id="home">
+<section class="landing-page relative md:-mt-20 -mt-28" id="home">
     <img src="{{ asset('img/BEYOND BOUNDARIES.png') }}" alt="Beyond Boundaries" class="center-image lg:px-0 px-0">
     <img src="{{ asset('img/LOGO.png') }}" alt="Overlay Logo" class="overlay-logo lg:px-0 px-12">
+    <div class="absolute top-[80%] left-[50%] mt-8 flex flex-col items-center font-primary animate-bounce text-gray-700">
+        <span class="text-sm md:text-md mb-1">SCROLL</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </div>
 </section>
 
 
