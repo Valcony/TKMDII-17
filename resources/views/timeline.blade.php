@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-<div class="w-full min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+<div class="w-full min-h-screen flex items-center justify-center pb-4 pt-2 sm:pb-6 sm:pt-3 lg:p-8">
 
     {{-- Container utama sebagai kanvas poster --}}
     <div data-aos="fade-up" data-aos-duration="900"

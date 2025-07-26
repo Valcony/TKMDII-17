@@ -102,10 +102,10 @@
         <!-- Desktop Nav (Right aligned) -->
 
         <ul class="hidden md:flex gap-10 items-center">
-            <li><a href="/#home" class="nav-link">HOME</a></li>
-            <li><a href="/#about" class="nav-link">ABOUT</a></li>
-            <li><a href="/#events" class="nav-link">EVENTS</a></li>
-            <li><a href="/#timeline" class="nav-link">TIMELINE</a></li>
+            <li><a href="/" class="nav-link">HOME</a></li>
+            <!-- <li><a href="/#about" class="nav-link">ABOUT</a></li> -->
+            <li><a href="/events" class="nav-link">EVENTS</a></li>
+            <li><a href="/timeline" class="nav-link">TIMELINE</a></li>
             <li><a href="/#merch" class="nav-link">MERCH</a></li>
             <li><a href="/#" class="nav-link">DELEGATION</a></li>
         </ul>
@@ -123,10 +123,10 @@
     <!-- Mobile Menu -->
     <div id="nav-menu"
         class="hidden absolute inset-0 h-screen w-screen bg-black/50 backdrop-blur-sm flex flex-col justify-center items-center space-y-8 z-40 md:hidden">
-        <a href="/#home" onclick="closeMenu()" class="nav-link text-3xl">HOME</a>
-        <a href="/#about" onclick="closeMenu()" class="nav-link text-3xl">ABOUT</a>
-        <a href="/#events" onclick="closeMenu()" class="nav-link text-3xl">EVENTS</a>
-        <a href="/#timeline" onclick="closeMenu()" class="nav-link text-3xl">TIMELINE</a>
+        <a href="/" onclick="closeMenu()" class="nav-link text-3xl">HOME</a>
+        <!-- <a href="/#about" onclick="closeMenu()" class="nav-link text-3xl">ABOUT</a> -->
+        <a href="/events" onclick="closeMenu()" class="nav-link text-3xl">EVENTS</a>
+        <a href="/timeline" onclick="closeMenu()" class="nav-link text-3xl">TIMELINE</a>
         <a href="/#merch" onclick="closeMenu()" class="nav-link text-3xl">MERCH</a>
         <a href="/#" onclick="closeMenu()" class="nav-link text-3xl">DELEGATION</a>
     </div>
