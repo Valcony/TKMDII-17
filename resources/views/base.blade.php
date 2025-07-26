@@ -130,8 +130,19 @@
             font-style: normal;
         }
 
+         @font-face {
+            font-family: 'Rena';
+            src: url('{{ asset('font/Rena-Regular.ttf') }}')  format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         .font-primary {
             font-family: 'Soon-Poster', sans-serif;
+        }
+
+        .font-secondary{
+            font-family: 'Rena', sans-serif;
         }
     </style>
     @yield('head')

@@ -3,7 +3,6 @@
     <style>
         .event-image-container {
             position: relative;
-            /* background-color: var(--yellow); */
         }
 
         .event-overlay {
@@ -129,8 +128,6 @@
         .event-image {
             width: 80%;
             transition: all 0.5s ease;
-            object-fit: cover;
-            background-color: var(--yellow);
         }
 
         .event-card:hover .event-image,
@@ -293,24 +290,22 @@
             padding: 1rem 1.5em;
         }
 
+        .container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .container::-webkit-scrollbar {
+            display: none;
+
+        }
+
+
+
         .content-wrapper {
             min-height: 100%;
             width: 100%;
             height: 100%;
-        }
-        .overlay {
-            position: absolute;
-            object-fit: contain;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-repeat: repeat;
-            background-image: url({{ asset('overlay/paper2.png') }});
-            mix-blend-mode: multiply;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 50%;
         }
     </style>
 
@@ -318,13 +313,13 @@
         <div class="content-wrapper">
             <div class="relative w-full h-[40%] z-10 flex justify-center items-center overflow-hidden">
                 <img class="absolute top-0 left-0 w-full h-full object-full mix-blend-overlay"
-                    src="{{ asset('events/Texture.webp') }}" alt="Texture" />
+                    src="{{ asset('assets/events/Texture.webp') }}" alt="Texture" />
                 <img style="padding: 0.5rem;" class="absolute top-0 left-0 w-full h-full object-fill mix-blend-multiply"
-                    src="{{ asset('events/eventTitle.webp') }}" alt="Event Title" />
+                    src="{{ asset('assets/events/eventTitle.webp') }}" alt="Event Title" />
             </div>
 
             <div class="w-full z-10 flex justify-center items-center">
-                <img style="padding: 0.5rem;" class="object-cover" src="{{ asset('events/tkmdiixvii.webp') }}"
+                <img style="padding: 0.5rem;" class="object-cover" src="{{ asset('assets/events/tkmdiixvii.webp') }}"
                     alt="Texture">
             </div>
 
@@ -334,7 +329,7 @@
 
                     <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbb">
                         <div class="event-image-container">
-                            <img class="event-image" src="{{ asset('events/Kbb.webp') }}" alt="Kbb Event">
+                            <img class="event-image" src="{{ asset('assets/events/Kbb.webp') }}" alt="Kbb Event">
                             <div class="event-overlay">
                                 <div class="event-overlay-icon"></div>
                                 <p class="event-overlay-text">Click to view details</p>
@@ -354,7 +349,7 @@
 
                     <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbd">
                         <div class="event-image-container">
-                            <img class="event-image" src="{{ asset('events/Kbd.webp') }}" alt="Kbd Event">
+                            <img class="event-image" src="{{ asset('assets/events/Kbd.webp') }}" alt="Kbd Event">
                             <div class="event-overlay">
                                 <div class="event-overlay-icon"></div>
                                 <p class="event-overlay-text">Click to view details</p>
@@ -374,7 +369,7 @@
 
                     <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbs">
                         <div class="event-image-container">
-                            <img class="event-image" src="{{ asset('events/Kbs.webp') }}" alt="Kbs Event">
+                            <img class="event-image" src="{{ asset('assets/events/Kbs.webp') }}" alt="Kbs Event">
                             <div class="event-overlay">
                                 <div class="event-overlay-icon"></div>
                                 <p class="event-overlay-text">Click to view details</p>
@@ -402,7 +397,7 @@
 
                     <div
                         class="z-[50] justify-center items-center w-full h-[90%] opacity-100 pointer-events-none hidden md:flex">
-                        <img src="{{ asset('events/tanaman.png') }}" alt="Decorative Plants"
+                        <img src="{{ asset('assets/events/tanaman.png') }}" alt="Decorative Plants"
                             class="w-[80%] lg:w-[80%] md:w-[110%] h-full min-h-[80%]">
                     </div>
 
@@ -494,51 +489,11 @@
                     </div>
                 </div>
 
-                <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbd">
-                    <div class="event-image-container">
-                        <img class="event-image" src="{{ asset('assets/events/Kbd.webp') }}" alt="Kbd Event">
-                        <div class="event-overlay">
-                            <div class="event-overlay-icon"></div>
-                            <p class="event-overlay-text">Click to view details</p>
-                        </div>
-                    </div>
-                    <div class="event-content">
-                        <h3 class="event-title">KBD
-                            <span class="underlineText"></span>
-                        </h3>
-                        <p class="event-description">
-                            Suspendisse potenti. Ut vel orci eleifend, rutrum felis at, faucibus nisi.
-                            Cras pharetra sapien at sem vulputate, nec eleifend tortor finibus.
-                            Vivamus in luctus nulla, id cursus risus.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbs">
-                    <div class="event-image-container">
-                        <img class="event-image" src="{{ asset('assets/events/Kbs.webp') }}" alt="Kbs Event">
-                        <div class="event-overlay">
-                            <div class="event-overlay-icon"></div>
-                            <p class="event-overlay-text">Click to view details</p>
-                        </div>
-                    </div>
-                    <div class="event-content">
-                        <h3 class="event-title">KBS
-                            <span class="underlineText"></span>
-                        </h3>
-                        <p class="event-description">
-                            Etiam convallis, magna eu volutpat efficitur, ex est finibus nisl,
-                            vel congue nisi ipsum in tortor. Vivamus feugiat hendrerit purus,
-                            vitae tincidunt mi molestie id.
-                        </p>
-                    </div>
-                </div>
 
             </div>
 
         </div>
     </div>
-    <div class="overlay"></div>
 
     <script>
         function setupEventAnimations() {
