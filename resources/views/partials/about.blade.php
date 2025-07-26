@@ -24,15 +24,21 @@
     }
 
     /* section about us */
-    .what-is-section {
-        position: relative;
-        background-image: url('{{ asset('img/bg_blue.png') }}');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        overflow: hidden;
-    }
+.what-is-section {
+    position: relative;
+    background-image: url('{{ asset('img/bg_blue.png') }}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: auto;
+    overflow: hidden;
+    padding: 2rem 1rem; /* Adds spacing for smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 
     .paperboard-overlay {
         position: absolute;
@@ -145,13 +151,13 @@
     }
 </style>
 
-<section class="landing-page -mt-20">
+<section class="landing-page -mt-20" id="home">
     <img src="{{ asset('img/BEYOND BOUNDARIES.png') }}" alt="Beyond Boundaries" class="center-image lg:px-0 px-0">
     <img src="{{ asset('img/LOGO.png') }}" alt="Overlay Logo" class="overlay-logo lg:px-0 px-12">
 </section>
 
 
-<section class="what-is-section">
+<section class="what-is-section" id="about">
     <div class="paperboard-overlay"></div>
     <div class="what-is-content">
         <div class="left-content">

@@ -5,11 +5,10 @@
 <link rel="preload" as="image" href="{{ asset('events/Kbs1.webp') }}"> -->
 @endsection
 @section('content')
-    {{-- Navbar --}}
-    @include('partials.navbar')
+    
 
     {{-- Section About --}}
-    <section id="about" class="w-full">
+    <section class="w-full">
         @include('partials.about')
     </section>
 
@@ -28,3 +27,4 @@
         @include('partials.merch')
     </section>
 @endsection
+

@@ -1,4 +1,3 @@
-
 <style>
     .nav-link {
         color: #efe650;
@@ -98,23 +97,23 @@
     }
 </style>
 
-<nav class="bg-transparent p-5 sticky top-0 w-full z-50">
+<nav class="p-5 sticky top-0 w-full z-50 transition-all duration-300 ease-in-out" id="navbar">
     <div class="mx-auto flex justify-end items-center">
         <!-- Desktop Nav (Right aligned) -->
 
         <ul class="hidden md:flex gap-10 items-center">
-            <li><a href="#about" class="nav-link">HOME</a></li>
-            <li><a href="#about" class="nav-link">ABOUT</a></li>
-            <li><a href="#events" class="nav-link">EVENTS</a></li>
-            <li><a href="#timeline" class="nav-link">TIMELINE</a></li>
-            <li><a href="#merch" class="nav-link">MERCH</a></li>
-            <li><a href="#" class="nav-link">DELEGATION</a></li>
+            <li><a href="/#home" class="nav-link">HOME</a></li>
+            <li><a href="/#about" class="nav-link">ABOUT</a></li>
+            <li><a href="/#events" class="nav-link">EVENTS</a></li>
+            <li><a href="/#timeline" class="nav-link">TIMELINE</a></li>
+            <li><a href="/#merch" class="nav-link">MERCH</a></li>
+            <li><a href="/#" class="nav-link">DELEGATION</a></li>
         </ul>
 
         <!-- Hamburger Icon -->
         <!-- Change from lg:hidden to md:hidden -->
-        <button id="menu-btn" class="md:hidden text-[#efe650] z-50 ml-auto" onclick="toggleMenu()">
-            <svg xmlns="http://www.w3.org/2000/svg" id="menu-icon" class="h-8 w-8" viewBox="0 0 24 24"
+        <button id="menu-btn" class="md:hidden text-[#efe650] z-50 ml-auto " onclick="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu-icon" class="h-10 w-10 " viewBox="0 0 24 24"
                 stroke="#efe650">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -124,17 +123,17 @@
     <!-- Mobile Menu -->
     <div id="nav-menu"
         class="hidden absolute inset-0 h-screen w-screen bg-black/50 backdrop-blur-sm flex flex-col justify-center items-center space-y-8 z-40 md:hidden">
-        <a href="#about" onclick="closeMenu()" class="nav-link text-3xl">HOME</a>
-        <a href="#about" onclick="closeMenu()" class="nav-link text-3xl">ABOUT</a>
-        <a href="#events" onclick="closeMenu()" class="nav-link text-3xl">EVENTS</a>
-        <a href="#timeline" onclick="closeMenu()" class="nav-link text-3xl">TIMELINE</a>
-        <a href="#merch" onclick="closeMenu()" class="nav-link text-3xl">MERCH</a>
-        <a href="#" onclick="closeMenu()" class="nav-link text-3xl">DELEGATION</a>
+        <a href="/#home" onclick="closeMenu()" class="nav-link text-3xl">HOME</a>
+        <a href="/#about" onclick="closeMenu()" class="nav-link text-3xl">ABOUT</a>
+        <a href="/#events" onclick="closeMenu()" class="nav-link text-3xl">EVENTS</a>
+        <a href="/#timeline" onclick="closeMenu()" class="nav-link text-3xl">TIMELINE</a>
+        <a href="/#merch" onclick="closeMenu()" class="nav-link text-3xl">MERCH</a>
+        <a href="/#" onclick="closeMenu()" class="nav-link text-3xl">DELEGATION</a>
     </div>
 </nav>
 
 <script>
-    
+
     function toggleMenu() {
         const menu = document.getElementById('nav-menu');
         const icon = document.getElementById('menu-icon');
@@ -167,17 +166,30 @@
         `;
     }
 
-    // Smooth scrolling for navigation links
-    document.addEventListener('DOMContentLoaded', function() {
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbar = document.getElementById("navbar");
+        const container = document.querySelector(".container");
+        container.addEventListener("scroll", function () {
+            const scrollPosition = container.scrollTop;
+            console.log("Scroll position:", scrollPosition);
+
+            if (scrollPosition > 100) {
+                navbar.classList.add("bg-[#1a1a1a]/10", "backdrop-blur-sm");
+            } else {
+                navbar.classList.remove("bg-[#1a1a1a]/10", "backdrop-blur-sm");
+            }
+        });
+
         const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-        
+
         navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
-                
+
                 if (targetSection) {
                     targetSection.scrollIntoView({
                         behavior: 'smooth',

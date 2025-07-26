@@ -1,5 +1,5 @@
 <div class="loader">
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500px" height="500px" version="1.1"
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="500px" height="500px" version="1.1"
         viewBox="0 0 2380 2380" preserveAspectRatio="xMinYMin"
         class="shape-rendering:geometricPrecisio justify-center items-center fill-rule:evenodd; clip-rule:evenodd lg:w-[500px] lg:h-[500px] w-[300px] h-[300px]">
         <path
@@ -54,7 +54,7 @@
     }
 
 
-    svg path {
+    #svg path {
         fill-opacity: 0;
         stroke-width: 10;
         stroke: #babab3;
@@ -170,7 +170,17 @@
             ease: "power4.inOut",
             delay: 2.5,
             onComplete: () => {
-                console.log("GSAP animation complete!");
+                AOS.init({
+                    once: true,
+                    mirror: true,
+                    // offset: 120,
+                });
+
+                // 🔥 Important: force re-check AOS after full render
+                setTimeout(() => {
+                    AOS.refreshHard(); // forcefully re-calculate positions
+                }, 500); // wait a bit after animation
+                // console.log("GSAP animation complete!");
                 // // Initialize AOS **after** all transitions are done
                 // if (typeof AOS !== 'undefined') {
                 //     AOS.init({
@@ -185,14 +195,6 @@
             }
         });
 
-        // if (typeof AOS !== 'undefined') {
-        // AOS.init({
-        //     once: false,
-        //     mirror: true,
-        //     easing: 'ease-in-out',
-        //     // offset: 120,
-        // });
-        // }
 
     });
 </script>

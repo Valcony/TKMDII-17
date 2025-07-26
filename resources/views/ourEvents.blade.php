@@ -470,7 +470,7 @@
 
                 <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbb">
                     <div class="event-image-container">
-                        <img class="event-image" src="{{ asset('events/Kbb.webp') }}" alt="Kbb Event">
+                        <img class="event-image" src="{{ asset('assets/events/Kbb.webp') }}" alt="Kbb Event">
                         <div class="event-overlay">
                             <div class="event-overlay-icon"></div>
                             <p class="event-overlay-text">Click to view details</p>
@@ -490,7 +490,7 @@
 
                 <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbd">
                     <div class="event-image-container">
-                        <img class="event-image" src="{{ asset('events/Kbd.webp') }}" alt="Kbd Event">
+                        <img class="event-image" src="{{ asset('assets/events/Kbd.webp') }}" alt="Kbd Event">
                         <div class="event-overlay">
                             <div class="event-overlay-icon"></div>
                             <p class="event-overlay-text">Click to view details</p>
@@ -510,7 +510,7 @@
 
                 <div class="event-card sm:col-span-4 col-span-12" data-event-type="Kbs">
                     <div class="event-image-container">
-                        <img class="event-image" src="{{ asset('events/Kbs.webp') }}" alt="Kbs Event">
+                        <img class="event-image" src="{{ asset('assets/events/Kbs.webp') }}" alt="Kbs Event">
                         <div class="event-overlay">
                             <div class="event-overlay-icon"></div>
                             <p class="event-overlay-text">Click to view details</p>
@@ -699,7 +699,7 @@
 
                     const randomIndex = getRandomIndexExcluding(imageNames.length, lastIndex);
                     lastIndex = randomIndex;
-                    img.src = `{{ asset('events/') }}/${imageNames[randomIndex]}`;
+                    img.src = `{{ asset('assets/events/') }}/${imageNames[randomIndex]}`;
 
                     await wait(500);
                     img.classList.remove('image-fade');

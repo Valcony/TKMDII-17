@@ -54,11 +54,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> --}}
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-
         :root {
             --blue: #4ca6f8;
             --yellow: #efe650;
@@ -90,6 +85,10 @@
         body {
             margin: 0;
             padding: 0;
+
+        }
+
+        * {
             scroll-behavior: smooth;
         }
 
@@ -106,7 +105,7 @@
             mix-blend-mode: multiply;
             pointer-events: none;
             z-index: 99999;
-            opacity: 50%;
+            opacity: 60%;
         }
 
         .container {
@@ -149,7 +148,7 @@
     }
     requestAnimationFrame(raf)
 
-    
+
 </script>
 <script>
     $(document).ready(function () {
@@ -160,7 +159,10 @@
         });
 
         $(".container").on('scroll', function () {
-            AOS.init();
+            AOS.init({
+                once: true,
+                    mirror: true,
+            });
         });
 
     });
@@ -171,7 +173,8 @@
 
     @include('partials.loader')
     <div class="container">
-
+        {{-- Navbar --}}
+        @include('partials.navbar')
         <!-- Include navbar disini -->
         @yield('content')
     </div>
