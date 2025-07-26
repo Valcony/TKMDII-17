@@ -103,59 +103,96 @@
         }
     }
 </style>
-
 <script>
-    document.addEventListener("DOMContentLoaded", (event) => {
-        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-        const startTime = performance.now();
-        const baseDelay = Math.min(1000, startTime);
-        const gsapDelay = baseDelay/1000;
-        setTimeout(() => {
-            document.querySelector('.svg').classList.add('fade');
-        }, baseDelay);
-        gsap.fromTo(
-            ".container",
-            {
-                duration: 2,
-                left: "100%",
-                scale: 0.5,
-                ease: "power4.inOut",
-                delay: gsapDelay
-            },
-            {
-                duration: 2,
-                left: "50%",
-                scale: 0.5,
-                transform: "translateX(-50%)",
-                ease: "power4.inOut",
-                delay: gsapDelay
-            }
-        );
+    document.addEventListener("DOMContentLoaded", async () => {
 
+        const waitForContainer = () => {
+            return new Promise((resolve) => {
+                const container = document.querySelector(".container");
+                if (!container) return resolve();
 
+                // Jika tidak ada gambar, resolve langsung
+                const images = container.querySelectorAll("img");
+                if (images.length === 0) return resolve();
 
-        gsap.to(".loader", 2.5, {
+                let loaded = 0;
+                images.forEach((img) => {
+                    if (img.complete) {
+                        loaded++;
+                        if (loaded === images.length) resolve();
+                    } else {
+                        img.addEventListener("load", () => {
+                            loaded++;
+                            if (loaded === images.length) resolve();
+                        });
+                        img.addEventListener("error", () => {
+                            loaded++;
+                            if (loaded === images.length) resolve();
+                        });
+                    }
+                });
+            });
+        };
+
+        await waitForContainer();
+
+        document.querySelector(".svg")?.classList.add("fade");
+        // gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        // Posisi awal (off-screen kanan)
+        gsap.set(".container", {
+            left: "100%",
+            scale: 0.5,
+        });
+
+        // GSAP animasi masuk
+        gsap.to(".container", {
+            duration: 2,
+            left: "50%",
+            scale: 0.5,
+            transform: "translateX(-50%)",
+            ease: "power4.inOut",
+            delay: 0.3,
+        });
+
+        // Loader menghilang
+        gsap.to(".loader", {
+            duration: 2.5,
             scale: 0,
             ease: "power4.inOut",
-            delay: 2
+            delay: 2,
         });
 
-        gsap.to(".container", 2, {
+        // Container full scale
+        gsap.to(".container", {
+            duration: 2,
             scale: 1,
             ease: "power4.inOut",
-            delay: 2.5
+            delay: 2.5,
+            onComplete: () => {
+                console.log("GSAP animation complete!");
+                // // Initialize AOS **after** all transitions are done
+                // if (typeof AOS !== 'undefined') {
+                //     AOS.init({
+                //         once: false,
+                //         mirror: true,
+                //         easing: 'ease-in-out',
+                //         // offset: 120,
+                //     });
+
+                //         AOS.refresh();
+                // }
+            }
         });
-        gsap.delayedCall(3, () => {
-        AOS.init({
-            once: false,
-            mirror: true,
-            offset: 120,
-            easing: 'ease-in-out',
-            // disable: window.innerWidth < 768
-        });
+
+        // if (typeof AOS !== 'undefined') {
+        // AOS.init({
+        //     once: false,
+        //     mirror: true,
+        //     easing: 'ease-in-out',
+        //     // offset: 120,
+        // });
+        // }
+
     });
-    });
-
-
-
 </script>

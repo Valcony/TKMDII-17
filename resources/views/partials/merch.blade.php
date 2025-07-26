@@ -22,7 +22,7 @@
             <p data-aos="zoom-out"
                 class="merch w-[80%] h-[120%] lg:text-8xl text-4xl text-center font-primary text-[var(--yellow)] bg-[var(--blue)] inline-block">
                 MERCH</p>
-            <p data-aos="zoom-out" data-aos-offset="500"
+            <p data-aos="zoom-out"
                 class="coming-soon rotate-3 w-[120%] h-[120%] lg:text-8xl text-4xl text-center font-primary text-[var(--pink)] bg-[var(--yellow)] inline-block">
                 COMING SOON</p>
         </div>

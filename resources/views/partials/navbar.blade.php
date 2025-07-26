@@ -1,3 +1,4 @@
+
 <style>
     .nav-link {
         color: #efe650;
@@ -10,16 +11,17 @@
     }
 
     @media (hover: hover) {
-    .nav-link:hover {
-        color: #e74893 !important;
+        .nav-link:hover {
+            color: #e74893 !important;
+        }
     }
-}
 
-@media (hover: none) {
-    .nav-link:hover {
-        color: #efe650 !important;
+    @media (hover: none) {
+        .nav-link:hover {
+            color: #efe650 !important;
+        }
     }
-}
+
     .nav-link:hover {
         background-color: #efe650;
         /* color: #efe650; */
@@ -40,20 +42,37 @@
         transform: translateY(20px);
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
-    
+
     #nav-menu.active a {
         opacity: 1;
         transform: translateY(0);
     }
-    
+
     /* Staggered animation delay for each link */
-    #nav-menu a:nth-child(1) { transition-delay: 0.1s; }
-    #nav-menu a:nth-child(2) { transition-delay: 0.2s; }
-    #nav-menu a:nth-child(3) { transition-delay: 0.3s; }
-    #nav-menu a:nth-child(4) { transition-delay: 0.4s; }
-    #nav-menu a:nth-child(5) { transition-delay: 0.5s; }
-    #nav-menu a:nth-child(6) { transition-delay: 0.6s; }
-    
+    #nav-menu a:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    #nav-menu a:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    #nav-menu a:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    #nav-menu a:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    #nav-menu a:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+
+    #nav-menu a:nth-child(6) {
+        transition-delay: 0.6s;
+    }
+
     /* Block reveal animation */
     #nav-menu a:before {
         content: '';
@@ -68,34 +87,35 @@
         transition: transform 0.5s ease;
         z-index: -2;
     }
-    
+
     #nav-menu a:hover:before {
         transform: scaleX(1);
     }
-    
-    
+
+
     #nav-menu.active:after {
         opacity: 1;
     }
 </style>
 
-<nav class="bg-transparent p-5 fixed w-full z-50">
-    <div class="container mx-auto flex justify-end items-center">
+<nav class="bg-transparent p-5 sticky top-0 w-full z-50">
+    <div class="mx-auto flex justify-end items-center">
         <!-- Desktop Nav (Right aligned) -->
 
         <ul class="hidden md:flex gap-10 items-center">
-            <li><a href="#" class="nav-link">HOME</a></li>
-            <li><a href="#" class="nav-link">ABOUT</a></li>
-            <li><a href="#" class="nav-link">EVENTS</a></li>
-            <li><a href="#" class="nav-link">TIMELINE</a></li>
-            <li><a href="#" class="nav-link">MERCH</a></li>
+            <li><a href="#about" class="nav-link">HOME</a></li>
+            <li><a href="#about" class="nav-link">ABOUT</a></li>
+            <li><a href="#events" class="nav-link">EVENTS</a></li>
+            <li><a href="#timeline" class="nav-link">TIMELINE</a></li>
+            <li><a href="#merch" class="nav-link">MERCH</a></li>
             <li><a href="#" class="nav-link">DELEGATION</a></li>
         </ul>
 
         <!-- Hamburger Icon -->
         <!-- Change from lg:hidden to md:hidden -->
         <button id="menu-btn" class="md:hidden text-[#efe650] z-50 ml-auto" onclick="toggleMenu()">
-            <svg xmlns="http://www.w3.org/2000/svg" id="menu-icon" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="#efe650">
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu-icon" class="h-8 w-8" viewBox="0 0 24 24"
+                stroke="#efe650">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
@@ -103,17 +123,18 @@
 
     <!-- Mobile Menu -->
     <div id="nav-menu"
-        class="hidden fixed inset-0 h-screen w-screen bg-black/50 backdrop-blur-sm flex flex-col justify-center items-center space-y-8 z-40 md:hidden">
-        <a href="#" onclick="closeMenu()" class="nav-link text-3xl">HOME</a>
-        <a href="#" onclick="closeMenu()" class="nav-link text-3xl">ABOUT</a>
-        <a href="#" onclick="closeMenu()" class="nav-link text-3xl">EVENTS</a>
-        <a href="#" onclick="closeMenu()" class="nav-link text-3xl">TIMELINE</a>
-        <a href="#" onclick="closeMenu()" class="nav-link text-3xl">MERCH</a>
+        class="hidden absolute inset-0 h-screen w-screen bg-black/50 backdrop-blur-sm flex flex-col justify-center items-center space-y-8 z-40 md:hidden">
+        <a href="#about" onclick="closeMenu()" class="nav-link text-3xl">HOME</a>
+        <a href="#about" onclick="closeMenu()" class="nav-link text-3xl">ABOUT</a>
+        <a href="#events" onclick="closeMenu()" class="nav-link text-3xl">EVENTS</a>
+        <a href="#timeline" onclick="closeMenu()" class="nav-link text-3xl">TIMELINE</a>
+        <a href="#merch" onclick="closeMenu()" class="nav-link text-3xl">MERCH</a>
         <a href="#" onclick="closeMenu()" class="nav-link text-3xl">DELEGATION</a>
     </div>
 </nav>
 
 <script>
+    
     function toggleMenu() {
         const menu = document.getElementById('nav-menu');
         const icon = document.getElementById('menu-icon');
@@ -138,11 +159,32 @@
     function closeMenu() {
         const menu = document.getElementById('nav-menu');
         const icon = document.getElementById('menu-icon');
-         menu.classList.remove('active');
+        menu.classList.remove('active');
         menu.classList.add('hidden');
         // Reset icon to hamburger
         icon.innerHTML = `
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         `;
     }
+
+    // Smooth scrolling for navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
 </script>

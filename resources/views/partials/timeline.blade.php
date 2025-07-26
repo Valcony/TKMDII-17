@@ -20,7 +20,7 @@
     }
 </style>
 
-<div class="max-h-[100%] w-full bg-[#318de0] flex items-center justify-center p-4">
+<div class="w-full bg-[#318de0] flex items-center justify-center p-4 my-10">
     <!-- <div class="w-full max-h-[100%] bg-[#318de0] rotate-3 flex items-center justify-center"> -->
         <div data-aos="flip-up" class="w-full max-h-[100%] justify-items-center items-center justify-center">
             <img src="{{ asset('assets/timeline.png') }}"

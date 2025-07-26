@@ -98,7 +98,7 @@
             style="--trapezoid-color: #4ba663; --trapezoid-clip: polygon(0% 0%, 100% 2%, 100% 97%, 0% 100%);">
 
             <div
-                class="w-[80%] relative max-w-[95vw] sm:max-w-[85vw] md:max-w-[75vw] lg:max-w-[80vw] flex justify-center items-center">
+                class="w-[80%] relative flex justify-center items-center">
 
                 <h1 id="ourEvents"
                     class="text-[#efe650] z-10 absolute top-[-13%] left-[2.8%] sm:top-[-10%] sm:left-[3.1%] text-center sm:text-xl md:text-2xl lg:text-4xl font-bold gsap-title">
@@ -147,7 +147,7 @@
             style="--trapezoid-color: #e74893; --trapezoid-clip: polygon(0% 0%, 100% 2%, 100% 97%, 0% 100%); margin-top: clamp(40px, 5vw, 60px);">
 
             <div
-                class="w-[80%] max-w-[98vw] sm:max-w-[85vw] md:max-w-[75vw] lg:max-w-[80vw] flex justify-center items-center">
+                class="w-full flex justify-center items-center">
 
                 <div class="w-full grid grid-cols-12 items-center text-white">
 

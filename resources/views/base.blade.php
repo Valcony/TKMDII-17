@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="lenis" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title }} | TKMDII XVII</title>
     <meta name="description"
         content="Temu Karya Mahasiswa Desain Interior Indonesia XVII @ Petra Christian University (PCU)">
@@ -17,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tkmdii.petra.ac.id/">
     <meta property="og:site_name" content="TKMDII XVII">
-    
+
     {{-- Tailwind --}}
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -28,8 +29,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Font Awesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        crossorigin="anonymous" />
 
 
     {{-- AOS --}}
@@ -43,17 +44,27 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
 
     {{-- Swiper JS --}}
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> --}}
+    {{-- Lenis --}}
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
+    {{--
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> --}}
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+
         :root {
             --blue: #4ca6f8;
             --yellow: #efe650;
             --pink: #e74893;
             --green: #4ba663;
+            --darker-blue: #086CC9;
         }
 
         /* Scrollbar */
@@ -67,7 +78,7 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: var(--blue);
+            background: var(--darker-blue);
             /* border-radius: 5px; */
         }
 
@@ -79,11 +90,12 @@
         body {
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
 
 
         /* Effect supaya texture jadi overlay */
-        /* .overlay1 {
+        .overlay1 {
             position: absolute;
             top: 0;
             bottom: 0;
@@ -95,7 +107,7 @@
             pointer-events: none;
             z-index: 99999;
             opacity: 50%;
-        } */
+        }
 
         .container {
             position: fixed;
@@ -127,25 +139,47 @@
 
 </head>
 <script>
+    import Lenis from ‘lenis’
+
+
+    const lenis = new Lenis()
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+
+    
+</script>
+<script>
     $(document).ready(function () {
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+
+        $(".container").on('scroll', function () {
+            AOS.init();
+        });
+
     });
 </script>
-@include('cursor')
-<body class="bg-[#f4f4e7]" oncontextmenu="return false;">
+
+<body data-aos-easing="ease" class="bg-[#f4f4e7] w-full h-full" oncontextmenu="return false;">
+    <div class="overlay1"></div>
+
     @include('partials.loader')
     <div class="container">
+
         <!-- Include navbar disini -->
         @yield('content')
     </div>
-
     <!-- Include footer disini -->
 </body>
+
 @yield('script')
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
