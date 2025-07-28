@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\University;
 
 Route::get('/', function () {
     return view('home', ['title' => 'Home']);
@@ -16,3 +17,14 @@ Route::get('/timeline', function () {
 // Route::fallback(function () {
 //     return view('soon', ['title' => 'Page Not Found']);
 // });
+Route::fallback(function () {
+    return redirect()->view('soon');
+});
+
+Route::get('/delegation', function () {
+    $universities = University::with('officer')->get(); // <--- GANTI 'liaison' MENJADI 'officer'
+    return view('delegation', [
+        'title' => 'Delegation',
+        'universities' => $universities
+    ]);
+});
