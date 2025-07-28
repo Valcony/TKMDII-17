@@ -192,7 +192,7 @@
                 <div id="slide-container"
                     class="items-center justify-center justify-items-center fade-mask overflow-y-auto h-60 sm:h-72 lg:h-80 p-4 font-secondary bg-[#f4f4e7]">
                     <p id="slide-caption" class="text-black font-semibold text-center leading-relaxed
-        text-sm sm:text-base lg:text-lg">
+        text-sm sm:text-base lg:text-lg transition-opacity duration-300 ease-in-out opacity-100">
                         TKMDII (Temu Karya Mahasiswa Desain Interior Indonesia) adalah forum tahunan yang mempertemukan
                         mahasiswa desain interior dari seluruh Indonesia. Acara ini menjadi wadah kolaborasi, berbagi
                         inspirasi, serta menampilkan karya dan gagasan inovatif dalam dunia desain interior antar
@@ -278,9 +278,11 @@
                 const captionEl = document.getElementById("slide-caption");
                 const activeSlideImage = document.querySelector(".swiper-slide-active img");
                 const newCaption = activeSlideImage?.getAttribute("data-caption") || "";
+                setTimeout(() => {
                 captionEl.innerHTML = newCaption;
                 captionEl.classList.remove("opacity-0");
                 captionEl.classList.add("opacity-100");
+                }, 250);
             }
 
         }

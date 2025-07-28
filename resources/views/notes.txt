@@ -1,0 +1,40 @@
+1. pas ngeload dee munculno container sek setelah selesai load baru muncul loader malahan(weird???)
+reference yg bener = capital
+
+    function simulateBackgroundTask() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve();
+                }, 3500);
+            });
+        }
+
+        // Function to hide the loader and show the content
+        function showContent() {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('full-content');
+
+            loader.classList.add('fade-out');
+            loader.addEventListener('transitionend', () => {
+                loader.classList.add('hidden');
+            }, {
+                once: true
+            });
+
+            content.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.add('visible');
+            }, 10);
+        }
+
+        async function init() {
+            await simulateBackgroundTask();
+            showContent();
+        }
+
+
+        window.addEventListener("load", function() {
+            // init();
+        });
+
+2. overlay paper ga full di /events

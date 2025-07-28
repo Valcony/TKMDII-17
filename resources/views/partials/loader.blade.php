@@ -176,7 +176,7 @@
                     // offset: 120,
                 });
 
-                // 🔥 Important: force re-check AOS after full render
+                
                 setTimeout(() => {
                     AOS.refreshHard(); // forcefully re-calculate positions
                 }, 500); // wait a bit after animation

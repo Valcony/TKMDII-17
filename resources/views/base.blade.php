@@ -83,10 +83,17 @@
 
         html,
         body {
-            margin: 0;
-            padding: 0;
-
+            margin: 0 !important;
+            padding: 0 !important;
+            /* width: 100vw;
+            overflow-x: hidden; */
         }
+
+        /* *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        } */
 
         * {
             scroll-behavior: smooth;
@@ -113,7 +120,11 @@
             top: 0;
             left: 0;
             width: 100%;
+            max-width: 100vw;
             height: 100%;
+            max-height: 100vh;
+            margin: 0;
+            padding: 0;
             /* display: flex; */
             justify-items: center;
             justify-content: center;
@@ -130,9 +141,9 @@
             font-style: normal;
         }
 
-         @font-face {
+        @font-face {
             font-family: 'Rena';
-            src: url('{{ asset('font/Rena-Regular.ttf') }}')  format('truetype');
+            src: url('{{ asset('font/Rena-Regular.ttf') }}') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -141,7 +152,7 @@
             font-family: 'Soon-Poster', sans-serif;
         }
 
-        .font-secondary{
+        .font-secondary {
             font-family: 'Rena', sans-serif;
         }
     </style>
@@ -172,7 +183,7 @@
         $(".container").on('scroll', function () {
             AOS.init({
                 once: true,
-                    mirror: true,
+                mirror: true,
             });
         });
 
