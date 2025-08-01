@@ -1,11 +1,26 @@
+@extends('base')
+
 @php
     $title = 'Delegation';
 @endphp
 
-@extends('base')
-
 @section('content')
 <style>
+    /* ========== CUSTOM FONT ========== */
+    @font-face {
+        font-family: 'T97Compressed';
+        src: url('/font/1797/1797-COMPRESSED.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Rena';
+        src: url('/font/Rena-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     body, html {
         margin: 0;
         padding: 0;
@@ -13,6 +28,7 @@
         min-height: 100vh;
     }
 
+    /* ========== BACKGROUND & HEADER ========== */
     .main-background-texture {
         position: fixed;
         top: 0;
@@ -48,107 +64,187 @@
         z-index: 3;
     }
 
-    .university-select-area { /* Container for the image/dropdown */
-        position: relative;
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 80px; /* Applied margin here, as requested */
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .selectuni-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        cursor: pointer;
-    }
-
-    #universityDropdown {
-        /* Style the dropdown to look like the selectuni.png image */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 10px 15px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white;
-        background-color: #4CAF50; /* Green background color (approximation) */
-        border: none;
-        border-radius: 0;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        text-align: center;
-        text-align-last: center;
-        cursor: pointer;
-        display: none; /* Initially hidden */
-        box-sizing: border-box;
-    }
-
-    #universityDropdown option {
-        color: black;
-        background-color: white;
-    }
-
-    /* Styles for the new status images */
-    .status-label-image { /* For the "STATUS" heading image */
-        max-width: 150px; /* Adjust size as needed */
-        height: auto;
-        display: block;
-        margin-bottom: 10px; /* Space below the label */
-    }
-
-    .status-dynamic-image-container { /* Container for inti.png, calon.png, peninjau.png */
-        min-height: 50px; /* Give it some height to prevent layout shifts */
-        display: flex; /* Use flexbox for centering/alignment */
-        justify-content: flex-start; /* Align to start, adjust to center if preferred */
-        align-items: center;
-        margin-top: 10px; /* Space below the status label */
-    }
-
-    .status-dynamic-image { /* For inti.png, calon.png, peninjau.png */
-        max-width: 120px; /* Adjust size as needed */
-        height: auto;
-        display: block;
-    }
-
+    /* ========== MAIN CONTAINER ========== */
     .content-area {
         position: relative;
         z-index: 1;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        min-height: calc(100vh - 300px);
+        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         background-color: transparent;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    /* ========== UNIVERSITY SECTION ========== */
+    .university-select-container {
+        width: 122%;
+    }
+
+    .university-select-area {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #universityDropdownButton {
+        background-color: #42945a;
+        color: white;
+        font-size: 3.2rem; 
+        text-align: left;
+        padding: 12px 20px;
+        user-select: none;
+        border: none;
+        letter-spacing: 2px;
+        width: 100%;
+        font-family: 'T97Compressed', sans-serif;
+        line-height: 1;
+        height: 80px; 
+        display: flex;
+        align-items: center;
+    }
+
+    #universityDropdown {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 2rem; 
+        border: 3px solid #42945a;
+        border-top: none;
+        background-color: white;
+        color: black;
+        box-sizing: border-box;
+        display: block;
+        font-family: 'T97Compressed', sans-serif;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    /* ========== STATUS SECTION ========== */
+    .status-section {
+        width: 122%;
+        margin-top: 40px;
+    }
+
+    .status-label-image {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .status-dynamic-image-container {
+        min-height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10px;
+        gap: 16px;
+    }
+
+    .status-dynamic-image {
+        max-width: 120px;
+        height: auto;
+        display: block;
+    }
+
+    /* ========== LIAISON OFFICER SECTION ========== */
+    .lo-box {
+        margin-top: 40px;
+        background-color: #42945a;
+        padding: 15px 24px;
+        border-radius: 4px;
+        width: 122%;
+        color: white;
+    }
+
+    .lo-box .title {
+        font-size: 4rem; 
+        font-weight: normal;
+        color: white;
+        margin-bottom: 8px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-family: 'T97Compressed', sans-serif;
+        line-height: 1;
+        height: 80px; 
+        display: flex;
+        align-items: center;
+    }
+
+    .lo-box .name {
+        font-size: 2rem; 
+        font-weight: normal;
+        color: #FFD700;
+        margin-bottom: 4px;
+        font-family: 'Rena', sans-serif;
+        line-height: 1;
+    }
+
+    .lo-box .phone {
+        font-size: 2rem; 
+        color: #B9FF66;
+        margin-top: 4px;
+        font-family: 'Rena', sans-serif;
+        line-height: 1;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+        .content-area {
+            max-width: 90%;
+        }
+        #universityDropdownButton {
+            font-size: 3rem; 
+            height: 60px; 
+        }
+        #universityDropdown {
+            font-size: 1.5rem; 
+        }
+
+        .lo-box {
+            padding: 15px;
+        }
+
+        .lo-box .title {
+            font-size: 3rem; 
+            margin-bottom: 6px;
+            height: 50px; 
+        }
+
+        .lo-box .name {
+            font-size: 1.5rem; 
+            margin-bottom: 2px;
+        }
+
+        .lo-box .phone {
+            font-size: 1.5rem;
+            margin-top: 2px;
+        }
+
+        .status-dynamic-image {
+            max-width: 90px;
+        }
     }
 </style>
 
+{{-- Background & Header --}}
 <div class="main-background-texture"></div>
-
 <div class="header-container">
     <div class="header-image-absolute"></div>
-    <div class="text-center" style="margin-bottom: 80px; margin-top: 100px; z-index: 3;">
+    <div class="text-center" style="margin-bottom: 50px; margin-top: 45px; z-index: 3;">
         <img src="{{ asset('assets/deletext.png') }}" alt="DELEGATION - Check your delegation details here" class="deletext-image">
     </div>
 </div>
 
-<div class="content-area w-full max-w-6xl flex flex-col md:flex-row gap-10">
-    <div class="university-select-container w-full md:w-1/2">
+{{-- Main Content Area --}}
+<div class="content-area">
+    {{-- University Dropdown --}}
+    <div class="university-select-container">
         <div class="university-select-area">
-            <img
-                id="selectUniClickableImage"
-                src="{{ asset('assets/selectuni.png') }}"
-                alt="Select University"
-                class="selectuni-image"
-                onclick="showUniversityDropdown()"
-            >
+            <div id="universityDropdownButton" onclick="openUniversityDropdown()">UNIVERSITY</div>
             <select id="universityDropdown" onchange="updateDetails()">
                 <option value="">-- Select University --</option>
                 @foreach ($universities as $univ)
@@ -164,24 +260,21 @@
         </div>
     </div>
 
-    <div class="w-full md:w-1/2">
-        <div style="margin-bottom: 40px;">
-            {{-- Replaced P tag with IMG for STATUS label --}}
-            <img src="{{ asset('assets/status.png') }}" alt="STATUS" class="status-label-image">
-            {{-- Container for the dynamic status image (Inti, Calon, Peninjau) --}}
-            <div id="statusImageContainer" class="status-dynamic-image-container">
-                {{-- Status image will be inserted here by JavaScript --}}
-            </div>
-        </div>
+    {{-- Status Section --}}
+    <div class="status-section">
+        <img src="{{ asset('assets/status.png') }}" alt="STATUS" class="status-label-image">
+        <div id="statusImageContainer" class="status-dynamic-image-container"></div>
+    </div>
 
-        <div style="margin-bottom: 40px;">
-            <p class="text-2xl font-bold text-black mb-2">LIAISON OFFICER</p>
-            <p id="liaisonName" class="text-xl text-black mb-1">-</p>
-            <p id="liaisonPhone" class="text-xl text-black">Contact Number: -</p>
-        </div>
+    {{-- Liaison Officer Section --}}
+    <div class="lo-box">
+        <div class="title">LIAISON OFFICER</div>
+        <div class="name" id="liaisonName">Nama LO</div>
+        <div class="phone" id="liaisonPhone">Contact Number: 08XX-XX-XXXX</div>
     </div>
 </div>
 
+{{-- Script --}}
 <script>
     function updateDetails() {
         const dropdown = document.getElementById('universityDropdown');
@@ -191,44 +284,30 @@
         const liaison = selected.getAttribute('data-liaison');
         const phone = selected.getAttribute('data-phone');
 
-        // Update Liaison Officer and Phone
-        document.getElementById('liaisonName').innerText = liaison || '-';
-        document.getElementById('liaisonPhone').innerText = phone ? `Contact Number: +62${phone.replace(/^0+/, '')}` : '-';
+        document.getElementById('liaisonName').innerText = liaison || 'Nama LO';
+        document.getElementById('liaisonPhone').innerText = phone ? `Contact Number: +62${phone.replace(/^0+/, '')}` : 'Contact Number: 08XX-XX-XXXX';
 
-        // Update Status as Image
         const statusImageContainer = document.getElementById('statusImageContainer');
-        statusImageContainer.innerHTML = ''; // Clear any previously displayed image
+        statusImageContainer.innerHTML = '';
 
-        if (status !== null && status !== '') {
-            let statusImageSrc = '';
-            if (status == 0) { // Assuming 0 for Inti
-                statusImageSrc = 'inti.png';
-            } else if (status == 1) { // Assuming 1 for Peninjau
-                statusImageSrc = 'peninjau.png';
-            } else if (status == 2) { // Assuming 2 for Calon
-                statusImageSrc = 'calon.png';
-            }
+        let statusImageSrc = '';
+        if (status == 0) statusImageSrc = 'inti.png';
+        else if (status == 1) statusImageSrc = 'peninjau.png';
+        else if (status == 2) statusImageSrc = 'calon.png';
 
-            if (statusImageSrc) {
-                const statusImg = document.createElement('img');
-                statusImg.src = `{{ asset('assets/') }}/${statusImageSrc}`;
-                statusImg.alt = statusImageSrc.replace('.png', ''); // Set meaningful alt text
-                statusImg.classList.add('status-dynamic-image'); // Apply CSS class
-                statusImageContainer.appendChild(statusImg);
-            }
+        if (statusImageSrc) {
+            const img = document.createElement('img');
+            img.src = `{{ asset('assets/') }}/${statusImageSrc}`;
+            img.alt = statusImageSrc.replace('.png', '');
+            img.classList.add('status-dynamic-image');
+            statusImageContainer.appendChild(img);
         }
     }
 
-    function showUniversityDropdown() {
-        document.getElementById('selectUniClickableImage').style.display = 'none'; // Hide the image
-        const dropdown = document.getElementById('universityDropdown');
-        dropdown.style.display = 'block'; // Show the dropdown
-        dropdown.focus(); // Focus the dropdown
+    function openUniversityDropdown() {
+        document.getElementById('universityDropdown').focus();
     }
 
-    // Call updateDetails initially to set default status/liaison info if a university is pre-selected
-    document.addEventListener('DOMContentLoaded', (event) => {
-        updateDetails();
-    });
+    document.addEventListener('DOMContentLoaded', updateDetails);
 </script>
 @endsection
