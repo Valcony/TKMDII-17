@@ -9,7 +9,7 @@
     /* ========== CUSTOM FONT ========== */
     @font-face {
         font-family: 'T97Compressed';
-        src: url('/font/1797/1797-COMPRESSED.otf') format('opentype');
+        src: url('/font/1797/1797-MEDIUM.otf') format('opentype');
         font-weight: normal;
         font-style: normal;
     }
@@ -92,7 +92,7 @@
     #universityDropdownButton {
         background-color: #42945a;
         color: white;
-        font-size: 3.2rem; 
+        font-size: 3.6rem; 
         text-align: left;
         padding: 12px 20px;
         user-select: none;
@@ -109,7 +109,7 @@
     #universityDropdown {
         width: 100%;
         padding: 12px 20px;
-        font-size: 2rem; 
+        font-size: 2.13rem; 
         border: 3px solid #42945a;
         border-top: none;
         background-color: white;
@@ -161,7 +161,7 @@
     }
 
     .lo-box .title {
-        font-size: 4rem; 
+        font-size: 3.6rem; 
         font-weight: normal;
         color: white;
         margin-bottom: 8px;
@@ -175,7 +175,7 @@
     }
 
     .lo-box .name {
-        font-size: 2rem; 
+        font-size: 1.8rem; 
         font-weight: normal;
         color: #FFD700;
         margin-bottom: 4px;
@@ -184,9 +184,9 @@
     }
 
     .lo-box .phone {
-        font-size: 2rem; 
+        font-size: 1.8rem; 
         color: #B9FF66;
-        margin-top: 4px;
+        margin-top: 10px;
         font-family: 'Rena', sans-serif;
         line-height: 1;
     }
