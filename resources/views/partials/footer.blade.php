@@ -1,8 +1,8 @@
-<footer class="w-full">
+<footer class="w-full bg-[#f7f7ed] ">
     <div class="bg-[var(--yellow)] h-16 flex items-center px-6  transform skew-y-3 mt-5 mb-10"></div>
     <!-- <div class="bg-[var(--yellow)] h-16 flex items-center px-6  transform -skew-y-1 -mt-5 mb-10"></div> -->
 
-    <div class="bg-[#f7f7ed] md:px-20 px-16 py-8 flex flex-col md:flex-row items-center md:items-start justify-between gap-6 font-secondary">
+    <div class="md:px-20 px-16 py-8 flex flex-col md:flex-row items-center md:items-start justify-between gap-6 font-secondary">
         <!-- Left side - Text content -->
         <div class="flex-1 text-center md:text-left">
             <h3 class="text-gray-800 text-2xl font-bold mb-2 leading-snug">
@@ -26,7 +26,7 @@
         <!-- Right side - Logo -->
         <div class="flex-shrink-0 flex justify-center md:justify-end items-center">
             <img src="{{ asset('img/LOGO.png') }}" alt="Logo TKMDII-17"
-                 class="h-full object-contain md:w-[50%] w-full">
+                 class="h-full object-contain w-[50%]">
         </div>
     </div>
 </footer>
