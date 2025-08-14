@@ -340,9 +340,7 @@
                                 <span class="underlineText"></span>
                             </h3>
                             <p class="event-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis,
-                                felis eu pharetra fermentum, magna risus commodo libero, ac finibus nisi
-                                ipsum vel arcu. Proin aliquet, nunc eu feugiat tincidunt.
+                               Proyek kolaborasi antar-delegasi untuk membuat furnitur dari limbah plastik yang akan digunakan warga RW 05 Siwalankerto.
                             </p>
                         </div>
                     </div>
@@ -360,9 +358,7 @@
                                 <span class="underlineText"></span>
                             </h3>
                             <p class="event-description">
-                                Suspendisse potenti. Ut vel orci eleifend, rutrum felis at, faucibus nisi.
-                                Cras pharetra sapien at sem vulputate, nec eleifend tortor finibus.
-                                Vivamus in luctus nulla, id cursus risus.
+                               Delegasi merancang booth 3x3 meter dengan bahan utama limbah industri interior. Tiap booth mewakili ruang fungsional kampus (kantin, ruang dosen, perpusatakaan, dll) dan wajib memiliki sistem knockdown reuse.
                             </p>
                         </div>
                     </div>
@@ -380,9 +376,7 @@
                                 <span class="underlineText"></span>
                             </h3>
                             <p class="event-description">
-                                Etiam convallis, magna eu volutpat efficitur, ex est finibus nisl,
-                                vel congue nisi ipsum in tortor. Vivamus feugiat hendrerit purus,
-                                vitae tincidunt mi molestie id.
+                                Pameran karya studio terbaik dari tiap kampus peserta, termasuk sketsa, perspektif, dan hasil render digital dari berbagai mata kuliah.
                             </p>
                         </div>
                     </div>
@@ -414,9 +408,7 @@
                                 class="acara-title text-2xl font-bold relative inline-block mb-4 pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white">
                                 CONGRESS DELEGATION
                             </h2>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p class="mb-4">Perwakilan resmi dari tiap institusi peserta yang ditunjuk untuk mengikuti sidang kongres TKMDII, membahas, merumuskan, dan memutuskan kebijakan, program kerja, serta hal-hal strategis terkait organisasi dan kegiatan TKMDII.</p>
                         </div>
                     </div>
 
@@ -429,15 +421,13 @@
                         <div class="isiAcara md:w-3/4 relative z-10">
                             <h2
                                 class="acara-title text-2xl font-bold relative inline-block mb-4 pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white">
-                                GUEST LECTURE
+                                SEMINAR & GUEST LECTURE
                             </h2>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p class="mb-4">Sesi edukatif dengan topik seperti desain sirkular, teknologi interior, dan material ramah lingkungan dari dosen dan praktisi.</p>
                         </div>
                     </div>
 
-                    <div
+                    <!-- <div
                         class="acara flex flex-col md:flex-row gap-12 relative !p-4 transition-all duration-300 cursor-pointer overflow-hidden">
                         <div
                             class="acara-bg absolute inset-0 bg-[#4ca6f8] rounded-r-2xl opacity-0 transform -translate-x-full">
@@ -452,7 +442,7 @@
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div
                         class="acara flex flex-col md:flex-row gap-12 relative !p-4 transition-all duration-300 cursor-pointer overflow-hidden">
@@ -465,9 +455,7 @@
                                 class="acara-title text-2xl font-bold relative inline-block mb-4 pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white">
                                 INDUSTRY WORKSHOP
                             </h2>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p class="mb-4">Workshop praktik dari industri desain interior dan produsen material.</p>
                         </div>
                     </div>
 
@@ -482,9 +470,7 @@
                                 class="acara-title text-2xl font-bold relative inline-block mb-4 pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-white">
                                 FIELD TRIP
                             </h2>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p class="mb-4">Eksplorasi budaya dan sejarah kota Surabaya, seperti ke Jalan Tunjungan, Rumah Bung Karno, Kampung Peneleh, dsb.</p>
                         </div>
                     </div>
                 </div>

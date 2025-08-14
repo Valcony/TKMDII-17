@@ -164,17 +164,15 @@
         background-color: #efe650;
         border-radius: 8px;
     }
-
-    
 </style>
 
 <section class="landing-page relative md:-mt-20 -mt-28" id="home">
     <img src="{{ asset('img/BEYOND BOUNDARIES.png') }}" alt="Beyond Boundaries" class="center-image lg:px-0 px-0">
     <img src="{{ asset('img/LOGO.png') }}" alt="Overlay Logo" class="overlay-logo lg:px-0 px-12">
-    <div class="absolute top-[80%] left-[50%] mt-8 flex flex-col items-center font-primary animate-bounce text-gray-700">
+    <div
+        class="absolute top-[80%] left-[50%] mt-8 flex flex-col items-center font-primary animate-bounce text-gray-700">
         <span class="text-sm md:text-md mb-1">SCROLL</span>
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
     </div>
@@ -213,15 +211,15 @@
                     <div class="swiper-slide">
                         <img src="{{ asset('img/logo-mini.png') }}" alt="Slide 2" class="w-64 p-4 h-auto object-contain"
                             data-caption="Skema warna logo TKMDII 25 mengandung makna inspiratif dan penuh harapan:
-<br>🌸 Magenta melambangkan inspirasi,
-<br>🔵 Biru untuk kecerdasan & percaya diri,
-<br>💛 Kuning menyimbolkan optimisme,
-<br>💚 Hijau mencerminkan nilai alami & keberlanjutan.">
+<br><i class='fa-solid fa-circle text-[var(--pink)] pr-2'></i>Magenta melambangkan inspirasi,
+<br><i class='fa-solid fa-circle text-[var(--blue)] pr-2'></i>Biru untuk kecerdasan & percaya diri,
+<br><i class='fa-solid fa-circle text-[var(--yellow)] pr-2'></i>Kuning menyimbolkan optimisme,
+<br><i class='fa-solid fa-circle text-[var(--green)] pr-2'></i>Hijau mencerminkan nilai alami & keberlanjutan.">
                     </div>
                     <div class="swiper-slide">
                         <img src="{{ asset('img/BEYOND BOUNDARIES.png') }}" class="w-64 p-4 h-auto object-contain"
                             alt="Slide 1"
-                            data-caption="Tema TKMDII 2025 menyoroti perpaduan teknologi, budaya, dan daur ulang. AI dimanfaatkan untuk efisiensi desain dan material berkelanjutan, sementara unsur budaya menjaga identitas lokal. Pendekatan ekonomi sirkular mendorong penggunaan limbah industri sebagai bahan utama booth pameran. Delegasi ditantang menciptakan booth fungsional dan kreatif dari limbah interior yang sudah diolah, berprinsip knockdown dan keberlanjutan, agar bisa dipakai ulang dan berdampak positif bagi masyarakat dan lingkungan.">
+                            data-caption="Tema TKMDII 2025 menyoroti perpaduan teknologi, budaya, dan daur ulang. Penggunaan limbah industri sebagai bahan utama pada karya peserta TKMDII. Peserta diharapkan menciptakan karya fungsional dan kreatif dari limbah interior yang sudah diolah, berprinsip keberlanjutan, agar dapat digunakan kembali dan berdampak positif bagi masyarakat dan lingkungan.">
                     </div>
                     <!-- <div class="swiper-slide">
                         <img src="{{ asset('img/dokum/day4.JPG') }}" alt="Slide 1" data-caption="caption4">
@@ -240,7 +238,7 @@
 
 
 <script>
-      function adjustCaptionAlignment() {
+    function adjustCaptionAlignment() {
         const container = document.getElementById('slide-container');
         const caption = document.getElementById('slide-caption');
 
@@ -279,9 +277,9 @@
                 const activeSlideImage = document.querySelector(".swiper-slide-active img");
                 const newCaption = activeSlideImage?.getAttribute("data-caption") || "";
                 setTimeout(() => {
-                captionEl.innerHTML = newCaption;
-                captionEl.classList.remove("opacity-0");
-                captionEl.classList.add("opacity-100");
+                    captionEl.innerHTML = newCaption;
+                    captionEl.classList.remove("opacity-0");
+                    captionEl.classList.add("opacity-100");
                 }, 250);
             }
 
