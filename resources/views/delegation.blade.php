@@ -75,7 +75,8 @@
         justify-content: flex-start;
         background-color: transparent;
         max-width: 1200px;
-        margin: auto;
+        height: auto;
+        /* margin: auto; */
     }
 
     /* ========== UNIVERSITY SECTION ========== */
@@ -295,12 +296,12 @@
     <div class="header-image-absolute"></div>
     <div class="text-center text-wrap" style="margin-bottom: 50px; margin-top: 45px; z-index: 3;">
         <!-- <div class="font-primary md:text-6xl text-2xl text-[var(--blue)]">CHECK YOUR DELEGATION DETAILS HERE</div> -->
-        <img src="{{ asset('assets/deletext.png') }}" alt="DELEGATION - Check your delegation details here" class="deletext-image">
+        <img src="{{ asset('assets/deletext.png') }}" alt="DELEGATION - Check your delegation details here" class="deletext-image md:bg-transparent  bg-white/70 p-3">
     </div>
 </div>
 
 {{-- Main Content Area --}}
-<div class="content-area">
+<div class="content-area mx-10">
     {{-- University Dropdown --}}
     <div class="university-select-container">
         <div class="university-select-area">
