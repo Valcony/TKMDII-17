@@ -309,7 +309,7 @@
         }
     </style>
 
-    <div class="main-container mix-blend-darken">
+    <div class="main-container mix-blend-darken font-secondary">
         <div class="content-wrapper">
             <div class="relative w-full h-[40%] z-10 flex justify-center items-center overflow-hidden">
                 <img class="absolute top-0 left-0 w-full h-full object-full mix-blend-overlay"

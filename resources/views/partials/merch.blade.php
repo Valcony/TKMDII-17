@@ -11,12 +11,14 @@
         pointer-events: none;
         z-index: 0;
         opacity: 50%;
+        width: 200%;
+        height: 100%;
     }
 </style>
 <div class="relative w-full h-auto">
     <div class="overlay7"></div>
     <div class="relative flex justify-center items-center">
-        <img src="{{ asset('assets/merch1.png') }}" alt="Background Image" class="absolute z-0 max-w-full">
+        <img src="{{ asset('assets/merch1.png') }}" alt="Background Image" class="absolute z-0 w-full h-full">
         <img src="{{ asset('assets/merch3.png') }}" alt="Foreground Image" class="relative z-10 max-w-[50%]">
         <div class="absolute z-20 items-center flex flex-col lg:gap-6">
             <p data-aos="zoom-out"

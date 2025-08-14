@@ -95,12 +95,15 @@
     #nav-menu.active:after {
         opacity: 1;
     }
+    
 </style>
 
-<nav class="p-5 sticky top-0 w-full z-50 transition-all duration-300 ease-in-out" id="navbar">
-    <div class="mx-auto flex justify-end items-center">
+<nav class="px-5 py-2 sticky top-0 w-full z-50 transition-all duration-300 ease-in-out" id="navbar">
+    <div class="mx-auto flex md:justify-between justify-end items-center">
         <!-- Desktop Nav (Right aligned) -->
-
+        <div class="hidden md:flex m-auto w-full">
+            <img src="{{ asset('img/LOGO.png') }}" alt="Logo TKMDII-17" class="w-[20%]">
+        </div>
         <ul class="hidden md:flex gap-10 items-center">
             <li><a href="/" class="nav-link">HOME</a></li>
             <!-- <li><a href="/#about" class="nav-link">ABOUT</a></li> -->

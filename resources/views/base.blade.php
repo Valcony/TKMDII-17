@@ -189,8 +189,17 @@
 
     });
 </script>
+<style>
+    .loader {
+        display: flex !important;
+    }
 
-<body data-aos-easing="ease" class="bg-[#f4f4e7] w-full h-full" oncontextmenu="return false;">
+    .container {
+        visibility: hidden;
+    }
+</style>
+
+<body data-aos-easing="ease" class="bg-[#f7f7ed] w-full h-full" oncontextmenu="return false;">
     <div class="overlay1"></div>
 
     @include('partials.loader')
@@ -199,8 +208,10 @@
         @include('partials.navbar')
         <!-- Include navbar disini -->
         @yield('content')
+        <!-- Include footer disini -->
+        @include('partials.footer')
     </div>
-    <!-- Include footer disini -->
+
 </body>
 
 @yield('script')

@@ -143,6 +143,7 @@
         gsap.set(".container", {
             left: "100%",
             scale: 0.5,
+            visibility: "visible"
         });
 
         // GSAP animasi masuk
