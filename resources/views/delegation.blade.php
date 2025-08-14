@@ -150,6 +150,21 @@
         display: block;
     }
 
+    .status-title {
+        font-size: 3.6rem; 
+        font-weight: normal;
+        color: #302f27;
+        margin-bottom: 8px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        font-family: 'T97Compressed', sans-serif;
+        line-height: 1;
+        height: 80px; 
+        display: flex;
+        align-items: center;
+        
+    }
+
     /* ========== LIAISON OFFICER SECTION ========== */
     .lo-box {
         margin-top: 40px;
@@ -191,6 +206,42 @@
         line-height: 1;
     }
 
+    /* ========== SKELETON LOADER ========== */
+    .skeleton-loader {
+        background: #f0f0f0;
+        background-image: linear-gradient(90deg, #f0f0f0 0px, rgba(229, 229, 229, 0.8) 40px, #f0f0f0 80px);
+        background-size: 200% 100%;
+        animation: skeleton-shimmer 1.5s infinite;
+        border-radius: 4px;
+    }
+
+    .skeleton-text {
+        height: 1.8rem;
+        margin-bottom: 4px;
+        width: 80%;
+    }
+
+    .skeleton-phone {
+        height: 1.8rem;
+        margin-top: 10px;
+        width: 60%;
+    }
+
+    .skeleton-image {
+        height: 50px;
+        width: 120px;
+        border-radius: 4px;
+    }
+
+    @keyframes skeleton-shimmer {
+        0% {
+            background-position: -200% 0;
+        }
+        100% {
+            background-position: 200% 0;
+        }
+    }
+
     /* ========== RESPONSIVE ========== */
     @media (max-width: 768px) {
         .content-area {
@@ -227,6 +278,14 @@
         .status-dynamic-image {
             max-width: 90px;
         }
+
+        .skeleton-image {
+            height: 90px;
+            width: 90px;
+        }
+        .skeleton-text, .skeleton-phone {
+            height: 1.5rem;
+        }
     }
 </style>
 
@@ -234,7 +293,8 @@
 <div class="main-background-texture"></div>
 <div class="header-container">
     <div class="header-image-absolute"></div>
-    <div class="text-center" style="margin-bottom: 50px; margin-top: 45px; z-index: 3;">
+    <div class="text-center text-wrap" style="margin-bottom: 50px; margin-top: 45px; z-index: 3;">
+        <!-- <div class="font-primary md:text-6xl text-2xl text-[var(--blue)]">CHECK YOUR DELEGATION DETAILS HERE</div> -->
         <img src="{{ asset('assets/deletext.png') }}" alt="DELEGATION - Check your delegation details here" class="deletext-image">
     </div>
 </div>
@@ -246,7 +306,7 @@
         <div class="university-select-area">
             <div id="universityDropdownButton" onclick="openUniversityDropdown()">UNIVERSITY</div>
             <select id="universityDropdown" onchange="updateDetails()">
-                <option value="">-- Select University --</option>
+                <option value="" disabled selected>-- Select University --</option>
                 @foreach ($universities as $univ)
                     <option
                         value="{{ $univ->id }}"
@@ -262,52 +322,79 @@
 
     {{-- Status Section --}}
     <div class="status-section">
-        <img src="{{ asset('assets/status.png') }}" alt="STATUS" class="status-label-image">
-        <div id="statusImageContainer" class="status-dynamic-image-container"></div>
+        <div class="status-title">STATUS</div>
+        <!-- <img src="{{ asset('assets/status.png') }}" alt="STATUS" class="status-label-image"> -->
+        <div id="statusImageContainer" class="status-dynamic-image-container">
+            {{-- Initial skeleton loader --}}
+            <div class="skeleton-loader skeleton-image"></div>
+        </div>
     </div>
 
     {{-- Liaison Officer Section --}}
     <div class="lo-box">
         <div class="title">LIAISON OFFICER</div>
-        <div class="name" id="liaisonName">Nama LO</div>
-        <div class="phone" id="liaisonPhone">Contact Number: 08XX-XX-XXXX</div>
+        <div class="name" id="liaisonName">
+            <div class="skeleton-loader skeleton-text"></div>
+        </div>
+        <div class="phone" id="liaisonPhone">
+            <div class="skeleton-loader skeleton-phone"></div>
+        </div>
     </div>
 </div>
 
 {{-- Script --}}
 <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        updateDetails();
+    });
+
     function updateDetails() {
         const dropdown = document.getElementById('universityDropdown');
         const selected = dropdown.options[dropdown.selectedIndex];
-
-        const status = selected.getAttribute('data-status');
-        const liaison = selected.getAttribute('data-liaison');
-        const phone = selected.getAttribute('data-phone');
-
-        document.getElementById('liaisonName').innerText = liaison || 'Nama LO';
-        document.getElementById('liaisonPhone').innerText = phone ? `Contact Number: +62${phone.replace(/^0+/, '')}` : 'Contact Number: 08XX-XX-XXXX';
-
+        
+        const liaisonNameElement = document.getElementById('liaisonName');
+        const liaisonPhoneElement = document.getElementById('liaisonPhone');
         const statusImageContainer = document.getElementById('statusImageContainer');
-        statusImageContainer.innerHTML = '';
 
-        let statusImageSrc = '';
-        if (status == 0) statusImageSrc = 'inti.png';
-        else if (status == 1) statusImageSrc = 'peninjau.png';
-        else if (status == 2) statusImageSrc = 'calon.png';
+        // Add skeleton loader
+        liaisonNameElement.innerHTML = '<div class="skeleton-loader skeleton-text"></div>';
+        liaisonPhoneElement.innerHTML = '<div class="skeleton-loader skeleton-phone"></div>';
+        statusImageContainer.innerHTML = '<div class="skeleton-loader skeleton-image"></div>';
+        
 
-        if (statusImageSrc) {
-            const img = document.createElement('img');
-            img.src = `{{ asset('assets/') }}/${statusImageSrc}`;
-            img.alt = statusImageSrc.replace('.png', '');
-            img.classList.add('status-dynamic-image');
-            statusImageContainer.appendChild(img);
-        }
+        setTimeout(() => {
+            if (selected && selected.value) {
+                const status = selected.getAttribute('data-status');
+                const liaison = selected.getAttribute('data-liaison');
+                const phone = selected.getAttribute('data-phone');
+
+                liaisonNameElement.innerText = liaison || 'Nama LO';
+                liaisonPhoneElement.innerText = phone ? `Contact Number: +62${phone.replace(/^0+/, '')}` : 'Contact Number: 08XX-XX-XXXX';
+
+                statusImageContainer.innerHTML = '';
+                let statusImageSrc = '';
+                if (status == 0) statusImageSrc = 'inti.png';
+                else if (status == 1) statusImageSrc = 'peninjau.png';
+                else if (status == 2) statusImageSrc = 'calon.png';
+
+                if (statusImageSrc) {
+                    const img = document.createElement('img');
+                    img.src = `{{ asset('assets/') }}/${statusImageSrc}`;
+                    img.alt = statusImageSrc.replace('.png', '');
+                    img.classList.add('status-dynamic-image');
+                    statusImageContainer.appendChild(img);
+                }
+            } else {
+                // Reset to default placeholders if no university is selected
+                liaisonNameElement.innerText = 'Nama LO';
+                liaisonPhoneElement.innerText = 'Contact Number: 08XX-XX-XXXX';
+                statusImageContainer.innerHTML = '';
+            }
+        }, 500); // Simulate a 500ms delay
     }
 
     function openUniversityDropdown() {
         document.getElementById('universityDropdown').focus();
     }
-
-    document.addEventListener('DOMContentLoaded', updateDetails);
 </script>
 @endsection
