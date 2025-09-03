@@ -11,7 +11,8 @@
 
     @media (hover: hover) {
         .nav-link:hover {
-            color: #e74893 !important;
+            /* color: #e74893 !important; */
+            color: #efe650 !important;
         }
     }
 
@@ -125,7 +126,7 @@
 
     <!-- Mobile Menu -->
     <div id="nav-menu"
-        class="hidden absolute inset-0 h-screen w-screen bg-black/50 backdrop-blur-sm flex flex-col justify-center items-center space-y-8 z-40 md:hidden">
+        class="hidden absolute inset-0 h-screen w-screen bg-black/70 backdrop-blur-sm flex flex-col justify-center items-center space-y-8 z-40 md:hidden">
         <a href="/" onclick="closeMenu()" class="nav-link text-3xl">HOME</a>
         <!-- <a href="/#about" onclick="closeMenu()" class="nav-link text-3xl">ABOUT</a> -->
         <a href="/events" onclick="closeMenu()" class="nav-link text-3xl">EVENTS</a>
@@ -172,6 +173,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         const navbar = document.getElementById("navbar");
+        const menu = document.getElementById('nav-menu');
         const container = document.querySelector(".container");
         container.addEventListener("scroll", function () {
             const scrollPosition = container.scrollTop;
