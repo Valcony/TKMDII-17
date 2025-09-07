@@ -14,6 +14,10 @@ Route::get('/timeline', function () {
     return view('timeline', ['title' => 'Timeline']);
 })->name('timeline');
 
+Route::get('/merch', function () {
+    return view('merch', ['title' => 'Merchs']);
+})->name('merch');
+
 // Route::fallback(function () {
 //     return view('soon', ['title' => 'Page Not Found']);
 // });
