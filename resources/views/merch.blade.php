@@ -164,7 +164,7 @@
                             <img src="{{ asset('assets/merchs/book2.png') }}" style="box-shadow: -1.5px 0 2px #513724;"
                                 class="w-full h-full z-[5] object-fill" alt="Sketchbook1">
                             <div
-                                class="absolute w-1/2 bottom-[-77.5%] z-[4] flex justify-center items-center h-full price-tag">
+                                class="absolute w-[100%] bottom-[-77.5%] z-[4] flex justify-center items-center h-full price-tag">
                                 <img src="{{ asset('assets/merchs/priceTag/book2.png') }}"
                                     style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                     alt="Book2 Price">
@@ -176,7 +176,7 @@
                                 style="filter: drop-shadow(-2px 0 4px #231810);" class="w-full z-[6] h-full object-fill"
                                 alt="Sketchbook2">
                             <div
-                                class="absolute w-1/2 bottom-[-77.5%] z-[5] flex justify-center items-center h-full price-tag">
+                                class="absolute w-[100%] bottom-[-77.5%] z-[5] flex justify-center items-center h-full price-tag">
                                 <img src="{{ asset('assets/merchs/priceTag/book1.png') }}"
                                     style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                     alt="Book1 Price">
@@ -189,7 +189,7 @@
                             <img src="{{ asset('assets/merchs/sticker1.jpg') }}" style="box-shadow: -1.5px 0 0px #7F5537;"
                                 class="w-full h-full z-[6] object-fill" alt="Sticker1">
                             <div
-                                class="absolute w-1/2 bottom-[-77.5%] z-[5] mr-[10%] flex justify-center items-center h-full price-tag">
+                                class="absolute w-[100%] bottom-[-77.5%] z-[5] mr-[10%] flex justify-center items-center h-full price-tag">
                                 <img src="{{ asset('assets/merchs/priceTag/sticker1.png') }}"
                                     style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                     alt="Sticker1 Price">
@@ -200,7 +200,7 @@
                             <img src="{{ asset('assets/merchs/sticker2.jpg') }}" style="box-shadow: -1.5px 0 1px #7F5537;"
                                 class="w-full z-[6] h-full object-fill" alt="Sticker2">
                             <div
-                                class="absolute w-1/2 bottom-[-77.5%] z-[5] flex justify-center items-center h-full price-tag">
+                                class="absolute w-[100%] bottom-[-77.5%] z-[5] flex justify-center items-center h-full price-tag">
                                 <img src="{{ asset('assets/merchs/priceTag/sticker2.png') }}"
                                     style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                     alt="Sticker2 Price">
@@ -217,7 +217,7 @@
                         <img src="{{ asset('assets/merchs/pin1.png') }}"
                             style="filter: drop-shadow(-5px 0.5px 0.5px #7F5537);"
                             class="w-full h-full z-[8] object-contain" alt="Pin1">
-                        <div class="absolute w-1/2 bottom-[-100%] z-[7] flex justify-center items-center h-full price-tag">
+                        <div class="absolute w-[100%] bottom-[-100%] z-[7] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/pin1.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Pin1 Price">
@@ -228,7 +228,7 @@
                         <img src="{{ asset('assets/merchs/pin2.png') }}"
                             style="filter: drop-shadow(-5px 0.5px 0.5px #7F5537);"
                             class="w-full h-full z-[7] object-contain" alt="Pin2">
-                        <div class="absolute w-1/2 bottom-[-100%] z-[6] flex justify-center items-center h-full price-tag">
+                        <div class="absolute w-[100%] bottom-[-100%] z-[6] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/pin2.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Pin2 Price">
@@ -244,7 +244,7 @@
                         <img src="{{ asset('assets/merchs/enamel1.png') }}"
                             style="filter: drop-shadow(-1.75px 0.5px 0.5px #000);"
                             class="w-full h-full z-[6] object-contain" alt="Enamel1">
-                        <div class="absolute w-1/2 bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
+                        <div class="absolute w-[100%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/enamel1.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Enamel1 Price">
@@ -255,7 +255,7 @@
                         <img src="{{ asset('assets/merchs/enamel2.png') }}"
                             style="filter: drop-shadow(-1.75px 0.5px 0.5px #000);"
                             class="w-full h-full z-[6] object-contain" alt="Enamel2">
-                        <div class="absolute w-1/2 bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
+                        <div class="absolute w-[100%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/enamel2.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Enamel2 Price">
@@ -266,7 +266,7 @@
                         <img src="{{ asset('assets/merchs/enamel3.png') }}"
                             style="filter: drop-shadow(-1.75px 0.5px 0.5px #000);"
                             class="w-full h-full z-[6] object-contain" alt="Enamel3">
-                        <div class="absolute w-1/2 bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
+                        <div class="absolute w-[100%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/enamel3.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Enamel3 Price">
@@ -277,7 +277,7 @@
                         <img src="{{ asset('assets/merchs/enamel4.png') }}"
                             style="filter: drop-shadow(-1.75px 0.5px 0.5px #000);"
                             class="w-full h-full z-[6] object-contain" alt="Enamel4">
-                        <div class="absolute w-1/2 bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
+                        <div class="absolute w-[100%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/enamel4.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Enamel4 Price">
@@ -295,7 +295,7 @@
                             class="w-full z-[6] h-full object-contain" alt="Key1">
                         <div class="absolute w-[100%] bottom-[-95%] z-[5] flex justify-center items-start h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/key1.png') }}"
-                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/4 h-auto object-contain"
+                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Key1 Price">
                         </div>
                     </div>
@@ -306,7 +306,7 @@
                             class="w-full rotate-[20deg] z-[5] absolute h-full object-contain" alt="Key2">
                         <div class="absolute w-[100%] bottom-[-95%] z-[4] flex justify-center items-start h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/key2.png') }}"
-                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/4 h-auto object-contain"
+                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Key2 Price">
                         </div>
                     </div>
@@ -318,7 +318,7 @@
                         <div
                             class="absolute w-[150%] left-[18%] bottom-[-95%] z-[6] flex justify-start items-start h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/key3.png') }}"
-                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/4 h-auto object-contain"
+                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-[120%] h-auto object-contain"
                                 alt="Key3 Price">
                         </div>
                     </div>
@@ -334,7 +334,7 @@
                             class="w-full h-full object-contain object-top" alt="Shirt1">
                         <img src="{{ asset('assets/merchs/priceTag/shirt1.png') }}"
                             style="filter: drop-shadow(-1.5px 0 2px #513724);"
-                            class="w-1/4 h-auto absolute top-0 left-0 object-contain price-tag" alt="Shirt1 Price">
+                            class="w-1/2 h-auto absolute top-0 left-0 object-contain price-tag" alt="Shirt1 Price">
                     </div>
                     <div class="w-[50%] ml-[-25%] h-full z-[3] relative flex flex-col justify-center items-end product-item product-idle"
                         data-product="shirt2">
@@ -343,7 +343,7 @@
                             class="w-full h-full ml-[-15%] object-contain object-top" alt="Shirt2">
                         <img src="{{ asset('assets/merchs/priceTag/shirt2.png') }}"
                             style="filter: drop-shadow(-1.5px 0 2px #513724);"
-                            class="w-1/4 h-auto absolute top-0 right-[10%] object-contain price-tag" alt="Shirt2 Price">
+                            class="w-1/2 h-auto absolute top-0 right-[10%] object-contain price-tag" alt="Shirt2 Price">
                     </div>
                     <div class="w-[50%] absolute right-[2.5%] h-full z-[2] flex flex-col justify-center items-end product-item product-idle"
                         data-product="shirt3">
@@ -352,7 +352,7 @@
                             class="w-full h-full object-contain object-top" alt="Shirt3">
                         <img src="{{ asset('assets/merchs/priceTag/shirt3.png') }}"
                             style="filter: drop-shadow(-1.5px 0 2px #513724);"
-                            class="w-1/4 h-auto absolute top-0 right-[10%] object-contain price-tag" alt="Shirt3 Price">
+                            class="w-1/2 h-auto absolute top-0 right-[10%] object-contain price-tag" alt="Shirt3 Price">
                     </div>
                 </div>
 
@@ -371,7 +371,7 @@
                             alt="Bag1">
                         <img src="{{ asset('assets/merchs/priceTag/bag1.png') }}"
                             style="filter: drop-shadow(-1.5px 0 2px #513724);"
-                            class="w-[32.5%] h-auto absolute top-0 left-0 object-contain price-tag" alt="Bag1 Price">
+                            class="w-[67.5%] h-auto absolute top-0 left-0 object-contain price-tag" alt="Bag1 Price">
                     </div>
                     <div class="w-[47.5%] absolute right-[30.5%] h-full z-[3] flex justify-center items-end product-item product-idle"
                         data-product="bag2">
@@ -379,7 +379,7 @@
                             alt="Bag2">
                         <img src="{{ asset('assets/merchs/priceTag/bag2.png') }}"
                             style="filter: drop-shadow(-1.5px 0 2px #513724);"
-                            class="w-[35%] h-auto absolute top-0 right-[-3%] object-contain price-tag" alt="Bag2 Price">
+                            class="w-[75%] h-auto absolute top-0 right-[-3%] object-contain price-tag" alt="Bag2 Price">
                     </div>
                     {{-- shadow Bag2 --}}
                     <div class="w-[47.5%] top-0 left-[17.5%] absolute h-full z-[2] flex justify-center items-center bg-[#7F5537]"
