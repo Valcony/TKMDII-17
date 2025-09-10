@@ -137,7 +137,7 @@
 
 @section('content')
     <div
-        class="w-full min-h-screen bg-[url('{{ asset('overlay/fiber.png') }}')] flex items-center justify-center p-2 pb-4 pt-2 sm:pb-6 sm:pt-3 lg:p-8">
+        class="w-full min-h-screen bg-[url('{{ asset('overlay/fiber.png') }}')] flex items-center justify-center p-0 pb-4 pt-0 sm:pb-6 sm:pt-0 lg:p-8">
         <div class="w-full h-full relative z-10 flex flex-col justify-center items-center">
             <h1 class="font-primary skew-x-[-12deg] text-[var(--pink)] leading-none
                                        text-[calc(clamp(2rem,8vw,10rem)*2.5)]">
