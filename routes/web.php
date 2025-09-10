@@ -15,7 +15,7 @@ Route::get('/timeline', function () {
 })->name('timeline');
 
 Route::get('/merch', function () {
-    return view('merch', ['title' => 'Merchs']);
+    return view('merch', ['title' => 'Merchandise']);
 })->name('merch');
 
 // Route::fallback(function () {

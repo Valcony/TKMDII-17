@@ -9,12 +9,18 @@
         transition: all 0.3s ease;
     }
 
+    .nav-link:hover {
+        color: #efe650 !important;
+    }
+
+
     @media (hover: hover) {
         .nav-link:hover {
-            /* color: #e74893 !important; */
-            color: #efe650 !important;
+            color: #e74893 !important;
         }
     }
+
+
 
     @media (hover: none) {
         .nav-link:hover {

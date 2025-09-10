@@ -8,6 +8,7 @@
             transform: translateY(-5px);
             transition: all 0.3s ease;
             pointer-events: none;
+            z-index: 999 !important;
         }
 
         .price-tag.show {
@@ -95,6 +96,41 @@
             transform: translateY(0);
             animation: windSway 2s ease-in-out infinite;
         }
+
+        /* === MOBILE STYLES === */
+        @media (max-width: 768px) {
+            .price-tag {
+                width: 150% !important;
+                bottom: -50% !important;
+                z-index: 999 !important;
+            }
+
+            /* Adjust the price tags for specific product groups if needed */
+            #shirts .price-tag {
+                width: 50% !important;
+                /* top: -10% !important; */
+                /* left: -10% !important; */
+            }
+
+            #bags .price-tag {
+                width: 100% !important;
+                top: -10% !important;
+                right: -30% !important;
+            }
+
+            #keys .price-tag {
+                width: 500% !important;
+            }
+
+            #enamels .price-tag {
+                width: 300% !important;
+            }
+
+            .product-active .price-tag {
+                animation: none;
+                /* Disable wind sway animation on mobile */
+            }
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 @endsection
@@ -103,16 +139,19 @@
     <div
         class="w-full min-h-screen bg-[url('{{ asset('overlay/fiber.png') }}')] flex items-center justify-center p-2 pb-4 pt-2 sm:pb-6 sm:pt-3 lg:p-8">
         <div class="w-full h-full relative z-10 flex flex-col justify-center items-center">
-            <h1
-                class="font-primary skew-x-[-12deg] text-[var(--pink)] leading-none
-               text-[calc(clamp(2rem,8vw,10rem)*2.5)]">
+            <h1 class="font-primary skew-x-[-12deg] text-[var(--pink)] leading-none
+                                       text-[calc(clamp(2rem,8vw,10rem)*2.5)]">
                 TKMDII
             </h1>
-            <h1
-                class="font-primary mt-[-10%] text-[var(--blue)] mix-blend-multiply leading-none
-               text-[calc(clamp(2rem,8vw,10rem)*2.5)]">
+            <h1 class="font-primary mt-[-10%] text-[var(--blue)] mix-blend-multiply leading-none
+                                       text-[calc(clamp(2rem,8vw,10rem)*2.5)]">
                 OFFICIAL
             </h1>
+            <div class="text-center">
+                <p class="font-primary text-base sm:text-xl lg:text-2xl text-[var(--green)] uppercase animate-pulse">
+                    Tap items to see the prices
+                </p>
+            </div>
             <div class="relative w-full max-w-6xl mb-[5%]">
                 <img src="{{ asset('assets/merchs/market.png') }}" class="w-full h-auto object-contain" alt="Market">
 
@@ -254,8 +293,7 @@
                         <img src="{{ asset('assets/merchs/key1.png') }}"
                             style="filter: drop-shadow(-0.25px 0.25px 0.25px #000);"
                             class="w-full z-[6] h-full object-contain" alt="Key1">
-                        <div
-                            class="absolute w-[100%] bottom-[-95%] z-[5] flex justify-center items-start h-full price-tag">
+                        <div class="absolute w-[100%] bottom-[-95%] z-[5] flex justify-center items-start h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/key1.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/4 h-auto object-contain"
                                 alt="Key1 Price">
@@ -266,8 +304,7 @@
                         <img src="{{ asset('assets/merchs/key2.png') }}"
                             style="filter: drop-shadow(-0.25px 0.25px 0.25px #000);"
                             class="w-full rotate-[20deg] z-[5] absolute h-full object-contain" alt="Key2">
-                        <div
-                            class="absolute w-[100%] bottom-[-95%] z-[4] flex justify-center items-start h-full price-tag">
+                        <div class="absolute w-[100%] bottom-[-95%] z-[4] flex justify-center items-start h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/key2.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/4 h-auto object-contain"
                                 alt="Key2 Price">
@@ -279,7 +316,7 @@
                             style="filter: drop-shadow(-0.25px 0.25px 0.25px #000);"
                             class="w-full h-full z-[7] object-contain object-left" alt="Key3">
                         <div
-                            class="absolute w-[125%] left-[18%] bottom-[-95%] z-[6] flex justify-start items-start h-full price-tag">
+                            class="absolute w-[150%] left-[18%] bottom-[-95%] z-[6] flex justify-start items-start h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/key3.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/4 h-auto object-contain"
                                 alt="Key3 Price">
@@ -325,8 +362,8 @@
                     {{-- shadow Bag1 --}}
                     <div class="w-[52.5%] top-0 left-[-3.5%] absolute h-full z-[2] flex justify-center items-center bg-[#7F5537]"
                         style="
-                        -webkit-mask: url('{{ asset('assets/merchs/bag11.png') }}') no-repeat top / contain;
-                        mask: url('{{ asset('assets/merchs/bag11.png') }}') no-repeat top / contain;">
+                                                -webkit-mask: url('{{ asset('assets/merchs/bag11.png') }}') no-repeat top / contain;
+                                                mask: url('{{ asset('assets/merchs/bag11.png') }}') no-repeat top / contain;">
                     </div>
                     <div class="w-[52.5%] h-full z-[4] flex justify-center items-end product-item product-idle"
                         data-product="bag1">
@@ -347,8 +384,8 @@
                     {{-- shadow Bag2 --}}
                     <div class="w-[47.5%] top-0 left-[17.5%] absolute h-full z-[2] flex justify-center items-center bg-[#7F5537]"
                         style="
-                        -webkit-mask: url('{{ asset('assets/merchs/bag21.png') }}') no-repeat top / contain;
-                        mask: url('{{ asset('assets/merchs/bag21.png') }}') no-repeat top / contain;">
+                                                -webkit-mask: url('{{ asset('assets/merchs/bag21.png') }}') no-repeat top / contain;
+                                                mask: url('{{ asset('assets/merchs/bag21.png') }}') no-repeat top / contain;">
                     </div>
                 </div>
             </div>
@@ -356,29 +393,25 @@
             <div class="absolute bottom-[-7.8%] right-[-0.8%] z-10 w-[22%] h-[26.5%] flex justify-center items-center">
                 {{-- Replace the existing buyHere button section with this more responsive version --}}
 
-                <div
-                    class="absolute bottom-0 right-0 z-10 w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[400px] 
-            h-auto flex justify-end items-end p-2 sm:p-4">
+                <div class="absolute bottom-0 right-0 z-10 w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[400px] 
+                                    h-auto flex justify-end items-end p-2 sm:p-4">
 
                     {{-- Buy Here Button - More Responsive Version --}}
-                    <button id="buyHere" onclick="window.location.href = 'https://forms.gle/Y388qsN1KUVPxA1s6'"
-                        class="relative z-[9] mb-4 mr-2 sm:mb-6 sm:mr-4 lg:mb-8 lg:mr-6
-               cursor-pointer flex justify-center items-center 
-               font-secondary font-bold uppercase 
-               text-[#fff]
-               px-3 sm:px-4 sm:py-2 lg:px-6 lg:py-2.5
-               transition-all duration-300 ease-out 
-               text-sm sm:text-base lg:text-lg xl:text-xl
-               focus:outline-none
-               min-w-[80px] sm:min-w-[100px] lg:min-w-[120px]
-               whitespace-nowrap">
+                    <button id="buyHere" onclick="window.location.href = 'https://forms.gle/Y388qsN1KUVPxA1s6'" class="relative z-[9] mb-4 mr-2 sm:mb-6 sm:mr-4 lg:mb-8 lg:mr-6
+                                       cursor-pointer flex justify-center items-center 
+                                       font-secondary font-bold uppercase 
+                                       text-[#fff]
+                                       px-3 sm:px-4 sm:py-2 lg:px-6 lg:py-2.5
+                                       transition-all duration-300 ease-out 
+                                       text-sm sm:text-base lg:text-lg xl:text-xl
+                                       focus:outline-none
+                                       min-w-[80px] sm:min-w-[100px] lg:min-w-[120px]
+                                       whitespace-nowrap">
                         <span class="relative z-10">BUY HERE</span>
                     </button>
 
-                    <img src="{{ asset('assets/merchs/priceList.png') }}"
-                        class="w-full max-w-[200px] sm:max-w-[250px] lg:max-w-[300px] 
-                h-auto object-contain"
-                        alt="Products Price List">
+                    <img src="{{ asset('assets/merchs/priceList.png') }}" class="w-full max-w-[200px] sm:max-w-[250px] lg:max-w-[300px] 
+                                        h-auto object-contain" alt="Products Price List">
                 </div>
 
                 <style>
@@ -502,14 +535,17 @@
                     }
                 </style>
 
-                <img src="{{ asset('assets/merchs/priceList.png') }}" class="w-full z-[10] h-full object-fill"
-                    alt="Products Price List">
+                <img id="priceList" src="{{ asset('assets/merchs/priceList.png') }}"
+                    class="w-full z-[10] h-full cursor-pointer  object-fill" alt="Products Price List">
             </div>
         </div>
+       
     </div>
 
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
+
             const productItems = document.querySelectorAll('.product-item');
             let activeProducts = new Set();
 
@@ -682,5 +718,57 @@
                 stagger: 0.5
             });
         });
+        // Price List Modal functionality
+        const priceListImage = document.getElementById('priceList');
+        const modal = document.getElementById('priceListModal');
+        const closeModal = document.getElementById('closeModal');
+
+        if (priceListImage && modal && closeModal) {
+            priceListImage.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+
+            closeModal.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            
+        }
     </script>
+    
 @endsection
+
+        <!-- Price List Modal -->
+<div id="priceListModal"
+    class="fixed inset-0 z-[9999] hidden isolate bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative w-full h-full flex items-center justify-center">
+        <button id="closeModal"
+            class="absolute top-4 right-4 bg-white/90 hover:bg-white cursor-pointer text-black rounded-full p-2 transition-colors duration-200">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <img src="{{ asset('assets/merchs/priceList.png') }}" 
+            class="max-w-full max-h-full object-contain z-[9999]"
+            alt="Products Price List - Full View">
+    </div>
+</div>
