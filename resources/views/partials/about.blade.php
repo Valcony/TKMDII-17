@@ -167,8 +167,8 @@
 </style>
 
 <section class="landing-page relative md:-mt-20 -mt-28" id="home">
-    <img loading="lazy" decoding="async" src="{{ asset('img/BEYOND BOUNDARIES.png') }}" alt="Beyond Boundaries" class="center-image lg:px-0 px-0">
-    <img loading="lazy" decoding="async" src="{{ asset('img/LOGO.png') }}" alt="Overlay Logo" class="overlay-logo lg:px-0 px-12">
+    <img src="{{ asset('img/BEYOND BOUNDARIES.png') }}" alt="Beyond Boundaries" class="center-image lg:px-0 px-0">
+    <img src="{{ asset('img/LOGO.png') }}" alt="Overlay Logo" class="overlay-logo lg:px-0 px-12">
     <div
         class="absolute top-[80%] left-[50%] mt-8 flex flex-col items-center font-primary animate-bounce text-gray-700">
         <span class="text-sm md:text-md mb-1">SCROLL</span>

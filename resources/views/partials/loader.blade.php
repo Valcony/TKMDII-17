@@ -112,7 +112,10 @@
                 if (!container) return resolve();
 
                 // Jika tidak ada gambar, resolve langsung
-                const images = container.querySelectorAll("img");
+                // const images = container.querySelectorAll("img");
+                const images = container.querySelectorAll(
+                    "img:not([loading='lazy']):not([decoding='async'])"
+                );
                 if (images.length === 0) return resolve();
 
                 let loaded = 0;
@@ -177,7 +180,7 @@
                     // offset: 120,
                 });
 
-                
+
                 setTimeout(() => {
                     AOS.refreshHard(); // forcefully re-calculate positions
                 }, 500); // wait a bit after animation

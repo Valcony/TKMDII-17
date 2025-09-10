@@ -43,6 +43,7 @@
     }
 
     /* efek hover */
+    .reveal-btn.active::before,
     .reveal-btn:hover::before {
         transform: translateX(0);
     }
@@ -66,7 +67,7 @@
                 <a href="{{ route('merch') }}" data-aos="zoom-out"
                     class="absolute bottom-0 translate-y-[50%] px-4 py-2 md:px-8 md:py-3 text-shadow-lg lg:text-5xl text-3xl font-primary text-white bg-[var(--green)] cursor-pointer transition-all duration-300 group overflow-hidden">
                     <span class="relative z-10">SEE MORE</span> <span
-                        class="absolute inset-0 bg-[var(--pink)] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
+                        class="absolute inset-0 bg-[var(--pink)] translate-y-full group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-500 ease-out"></span>
                 </a>
             </div>
         </div>
