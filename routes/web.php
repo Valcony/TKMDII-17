@@ -18,12 +18,12 @@ Route::get('/merch', function () {
     return view('merch', ['title' => 'Merchandise']);
 })->name('merch');
 
-// Route::fallback(function () {
-//     return view('soon', ['title' => 'Page Not Found']);
-// });
 Route::fallback(function () {
-    return redirect()->view('soon');
+    return view('soon', ['title' => 'Page Not Found']);
 });
+// Route::fallback(function () {
+//     return redirect()->view('soon');
+// });
 
 Route::get('/delegation', function () {
     $universities = University::with('officer')->get(); // <--- GANTI 'liaison' MENJADI 'officer'
