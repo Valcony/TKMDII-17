@@ -167,8 +167,8 @@
                         <!-- Original items -->
                         <div class="carousel-item relative flex h-[80%] justify-center items-center w-full event-container"
                             data-aos="fade-right" data-aos-delay="100" data-aos-duration="600">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbb1.webp') }}"
-                                alt="Kbb">
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbb1.webp') }}"
+                                alt="Kbb" loading="lazy" decoding="async">
                             <div class="trapezoid-container absolute left-1 bottom-[-4px] sm:left-[10px] sm:bottom-[-3px] sm:rotate-12 rotate-13 md:left-2 md:bottom-[-7px] md:rotate-13 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 5px 0px 5px">
                                 <h1 class="text-[#e74893] font-bold text-xs md:text-base lg:text-xl">KBB</h1>
@@ -176,7 +176,7 @@
                         </div>
                         <div class="carousel-item relative flex h-[80%] justify-center items-center w-full event-container"
                             data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbd1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbd1.webp') }}"
                                 alt="Kbd">
                             <div class="trapezoid-container absolute left-1 bottom-[-4px] sm:left-[10px] sm:bottom-[-3px] sm:rotate-12 rotate-13 md:left-2 md:bottom-[-7px] md:rotate-13 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 5px 0px 5px">
@@ -185,7 +185,7 @@
                         </div>
                         <div class="carousel-item relative flex h-[80%] justify-center items-center w-full event-container"
                             data-aos="fade-left" data-aos-delay="300" data-aos-duration="600">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs1.webp') }}"
                                 alt="Kbs">
                             <div class="trapezoid-container absolute left-1 bottom-[-4px] sm:left-[10px] sm:bottom-[-3px] sm:rotate-12 rotate-13 md:left-2 md:bottom-[-7px] md:rotate-13 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 5px 0px 5px">
@@ -195,7 +195,7 @@
 
                         <!-- Duplicated items for infinite effect -->
                         <div class="carousel-item relative flex h-[80%] justify-center items-center w-full event-container">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbb1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbb1.webp') }}"
                                 alt="Kbb">
                             <div class="trapezoid-container absolute left-1 bottom-[-4px] sm:left-[10px] sm:bottom-[-3px] sm:rotate-12 rotate-13 md:left-2 md:bottom-[-7px] md:rotate-13 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 5px 0px 5px">
@@ -203,7 +203,7 @@
                             </div>
                         </div>
                         <div class="carousel-item relative flex h-[80%] justify-center items-center w-full event-container">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbd1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbd1.webp') }}"
                                 alt="Kbd">
                             <div class="trapezoid-container absolute left-1 bottom-[-4px] sm:left-[10px] sm:bottom-[-3px] sm:rotate-12 rotate-13 md:left-2 md:bottom-[-7px] md:rotate-13 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 5px 0px 5px">
@@ -211,7 +211,7 @@
                             </div>
                         </div>
                         <div class="carousel-item relative flex h-[80%] justify-center items-center w-full event-container">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs1.webp') }}"
                                 alt="Kbs">
                             <div class="trapezoid-container absolute left-1 bottom-[-4px] sm:left-[10px] sm:bottom-[-3px] sm:rotate-12 rotate-13 md:left-2 md:bottom-[-7px] md:rotate-13 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 5px 0px 5px">
@@ -242,7 +242,7 @@
                         <!-- Original items -->
                         <div class="carousel-item2 relative flex h-[80%] justify-center items-center w-full event-container"
                             data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbb1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbb1.webp') }}"
                                 alt="Kbb">
                             <div class="trapezoid-container absolute right-1 bottom-[-4px] sm:right-2 sm:bottom-[-14px] -rotate-2 md:right-0 lg:right-3 lg:bottom-[-18px] md:rotate-3 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 10px 0px 10px">
@@ -252,7 +252,7 @@
                         </div>
                         <div class="carousel-item2 relative flex h-[80%] justify-center items-center w-full event-container"
                             data-aos="zoom-in" data-aos-delay="500" data-aos-duration="600">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbd1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbd1.webp') }}"
                                 alt="Kbd">
                             <div class="trapezoid-container absolute right-1 bottom-[-4px] sm:right-2 sm:bottom-[-14px] -rotate-2 md:right-0 lg:right-3 lg:bottom-[-18px] md:rotate-3 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 10px 0px 10px">
@@ -262,7 +262,7 @@
                         </div>
                         <div class="carousel-item2 relative flex h-[80%] justify-center items-center w-full event-container"
                             data-aos="zoom-in" data-aos-delay="600" data-aos-duration="600">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs1.webp') }}"
                                 alt="Kbs">
                             <div class="trapezoid-container absolute right-1 bottom-[-4px] sm:right-2 sm:bottom-[-14px] -rotate-2 md:right-0 lg:right-3 lg:bottom-[-18px] md:rotate-3 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 10px 0px 10px">
@@ -272,7 +272,7 @@
                         </div>
                         <div class="carousel-item2 relative flex h-[80%] justify-center items-center w-full event-container"
                             data-aos="zoom-in" data-aos-delay="700" data-aos-duration="600">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs2.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs2.webp') }}"
                                 alt="Kbs">
                             <div class="trapezoid-container absolute right-[-5px] bottom-[-4px] sm:right-2 sm:bottom-[-14px] -rotate-2 md:right-[-2.5%] lg:right-3 lg:bottom-[-18px] md:rotate-3 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 10px 0px 10px">
@@ -284,7 +284,7 @@
 
                         <div
                             class="carousel-item2 relative flex h-[80%] justify-center items-center w-full event-container">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbb1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbb1.webp') }}"
                                 alt="Kbb">
                             <div class="trapezoid-container absolute right-1 bottom-[-4px] sm:right-2 sm:bottom-[-14px] -rotate-2 md:right-0 lg:right-3 lg:bottom-[-18px] md:rotate-3 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 10px 0px 10px">
@@ -294,7 +294,7 @@
                         </div>
                         <div
                             class="carousel-item2 relative flex h-[80%] justify-center items-center w-full event-container">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbd1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbd1.webp') }}"
                                 alt="Kbd">
                             <div class="trapezoid-container absolute right-1 bottom-[-4px] sm:right-2 sm:bottom-[-14px] -rotate-2 md:right-0 lg:right-3 lg:bottom-[-18px] md:rotate-3 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 10px 0px 10px">
@@ -304,7 +304,7 @@
                         </div>
                         <div
                             class="carousel-item2 relative flex h-[80%] justify-center items-center w-full event-container">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs1.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs1.webp') }}"
                                 alt="Kbs">
                             <div class="trapezoid-container absolute right-1 bottom-[-4px] sm:right-2 sm:bottom-[-14px] -rotate-2 md:right-0 lg:right-3 lg:bottom-[-18px] md:rotate-3 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 10px 0px 10px">
@@ -314,7 +314,7 @@
                         </div>
                         <div
                             class="carousel-item2 relative flex h-[80%] justify-center items-center w-full event-container">
-                            <img class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs2.webp') }}"
+                            <img loading="lazy" decoding="async" class="w-[90%] sm:w-[80%] max-h-[100%]" src="{{ asset('assets/events/Kbs2.webp') }}"
                                 alt="Kbs">
                             <div class="trapezoid-container absolute right-[-5px] bottom-[-4px] sm:right-2 sm:bottom-[-14px] -rotate-2 md:right-[-2.5%] lg:right-3 lg:bottom-[-18px] md:rotate-3 trapezoid-label"
                                 style="--trapezoid-color: #efe650; --trapezoid-clip: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); padding: 0px 10px 0px 10px">

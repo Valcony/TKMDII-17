@@ -21,7 +21,7 @@
 <div class="w-full bg-[#318de0] flex items-center justify-center p-4 my-10">
     <div data-aos="flip-up" class="w-full max-h-[100%] flex items-center justify-center">
         <a href="{{ route('timeline') }}" class="w-full flex items-center justify-center">
-            <img src="{{ asset('assets/timeline.png') }}"
+            <img loading="lazy" decoding="async" src="{{ asset('assets/timeline.png') }}"
                  class="lg:max-w-[80%] max-w-[100%] max-h-full object-contain rounded-lg animate-custom-bounce cursor-pointer"
                  onmouseover="this.style.filter='drop-shadow(0 0 10px #FFD700)'" 
                  onmouseout="this.style.filter='none'">
