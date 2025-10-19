@@ -119,7 +119,19 @@
             }
 
             #keys .price-tag {
-                width: 500% !important;
+                width: 300% !important;
+                bottom: -70% !important;
+                left: 50% !important;
+                right: auto !important;
+                transform: translateX(-50%);
+                z-index: 999999 !important;
+            }
+
+            #keys [data-product="key1"] .price-tag,
+            #keys [data-product="key2"] .price-tag {
+                width: 200% !important;
+                z-index: 999999 !important;
+
             }
 
             #enamels .price-tag {
@@ -140,11 +152,11 @@
         class="w-full min-h-screen bg-[url('{{ asset('overlay/fiber.png') }}')] flex items-center justify-center p-0 pb-4 pt-0 sm:pb-6 sm:pt-0 lg:p-8">
         <div class="w-full h-full relative z-10 flex flex-col justify-center items-center">
             <h1 class="font-primary skew-x-[-12deg] text-[var(--pink)] leading-none
-                                       text-[calc(clamp(2rem,8vw,10rem)*2.5)]">
+                                               text-[calc(clamp(2rem,8vw,10rem)*2.5)]">
                 TKMDII
             </h1>
             <h1 class="font-primary mt-[-10%] text-[var(--blue)] mix-blend-multiply leading-none
-                                       text-[calc(clamp(2rem,8vw,10rem)*2.5)]">
+                                               text-[calc(clamp(2rem,8vw,10rem)*2.5)]">
                 OFFICIAL
             </h1>
             <div class="text-center">
@@ -217,7 +229,8 @@
                         <img src="{{ asset('assets/merchs/pin1.png') }}"
                             style="filter: drop-shadow(-5px 0.5px 0.5px #7F5537);"
                             class="w-full h-full z-[8] object-contain" alt="Pin1">
-                        <div class="absolute w-[100%] bottom-[-100%] z-[7] flex justify-center items-center h-full price-tag">
+                        <div
+                            class="absolute w-[100%] bottom-[-100%] z-[7] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/pin1.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Pin1 Price">
@@ -228,7 +241,8 @@
                         <img src="{{ asset('assets/merchs/pin2.png') }}"
                             style="filter: drop-shadow(-5px 0.5px 0.5px #7F5537);"
                             class="w-full h-full z-[7] object-contain" alt="Pin2">
-                        <div class="absolute w-[100%] bottom-[-100%] z-[6] flex justify-center items-center h-full price-tag">
+                        <div
+                            class="absolute w-[100%] bottom-[-100%] z-[6] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/pin2.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Pin2 Price">
@@ -244,7 +258,8 @@
                         <img src="{{ asset('assets/merchs/enamel1.png') }}"
                             style="filter: drop-shadow(-1.75px 0.5px 0.5px #000);"
                             class="w-full h-full z-[6] object-contain" alt="Enamel1">
-                        <div class="absolute w-[150%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
+                        <div
+                            class="absolute w-[150%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/enamel1.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Enamel1 Price">
@@ -255,7 +270,8 @@
                         <img src="{{ asset('assets/merchs/enamel2.png') }}"
                             style="filter: drop-shadow(-1.75px 0.5px 0.5px #000);"
                             class="w-full h-full z-[6] object-contain" alt="Enamel2">
-                        <div class="absolute w-[150%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
+                        <div
+                            class="absolute w-[150%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/enamel2.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Enamel2 Price">
@@ -266,7 +282,8 @@
                         <img src="{{ asset('assets/merchs/enamel3.png') }}"
                             style="filter: drop-shadow(-1.75px 0.5px 0.5px #000);"
                             class="w-full h-full z-[6] object-contain" alt="Enamel3">
-                        <div class="absolute w-[150%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
+                        <div
+                            class="absolute w-[150%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/enamel3.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Enamel3 Price">
@@ -277,7 +294,8 @@
                         <img src="{{ asset('assets/merchs/enamel4.png') }}"
                             style="filter: drop-shadow(-1.75px 0.5px 0.5px #000);"
                             class="w-full h-full z-[6] object-contain" alt="Enamel4">
-                        <div class="absolute w-[150%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
+                        <div
+                            class="absolute w-[150%] bottom-[-95%] z-[5] flex justify-center items-center h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/enamel4.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
                                 alt="Enamel4 Price">
@@ -293,9 +311,9 @@
                         <img src="{{ asset('assets/merchs/key1.png') }}"
                             style="filter: drop-shadow(-0.25px 0.25px 0.25px #000);"
                             class="w-full z-[6] h-full object-contain" alt="Key1">
-                        <div class="absolute w-[100%] bottom-[-95%] z-[5] flex justify-center items-start h-full price-tag">
+                        <div class="absolute w-[80%] bottom-[-95%] z-[5] flex justify-center items-start h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/key1.png') }}"
-                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
+                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-[90%] h-auto object-contain"
                                 alt="Key1 Price">
                         </div>
                     </div>
@@ -304,9 +322,9 @@
                         <img src="{{ asset('assets/merchs/key2.png') }}"
                             style="filter: drop-shadow(-0.25px 0.25px 0.25px #000);"
                             class="w-full rotate-[20deg] z-[5] absolute h-full object-contain" alt="Key2">
-                        <div class="absolute w-[100%] bottom-[-95%] z-[4] flex justify-center items-start h-full price-tag">
+                        <div class="absolute w-[80%] bottom-[-95%] z-[4] flex justify-center items-start h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/key2.png') }}"
-                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-1/1 h-auto object-contain"
+                                style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-[90%] h-auto object-contain"
                                 alt="Key2 Price">
                         </div>
                     </div>
@@ -316,7 +334,7 @@
                             style="filter: drop-shadow(-0.25px 0.25px 0.25px #000);"
                             class="w-full h-full z-[7] object-contain object-left" alt="Key3">
                         <div
-                            class="absolute w-[150%] left-[18%] bottom-[-95%] z-[6] flex justify-start items-start h-full price-tag">
+                            class="absolute w-[120%] left-[50%] bottom-[-95%] z-[6] flex justify-start items-start h-full price-tag">
                             <img src="{{ asset('assets/merchs/priceTag/key3.png') }}"
                                 style="filter: drop-shadow(-1.5px 0 2px #513724);" class="w-[120%] h-auto object-contain"
                                 alt="Key3 Price">
@@ -362,8 +380,8 @@
                     {{-- shadow Bag1 --}}
                     <div class="w-[52.5%] top-0 left-[-3.5%] absolute h-full z-[2] flex justify-center items-center bg-[#7F5537]"
                         style="
-                                                -webkit-mask: url('{{ asset('assets/merchs/bag11.png') }}') no-repeat top / contain;
-                                                mask: url('{{ asset('assets/merchs/bag11.png') }}') no-repeat top / contain;">
+                                                        -webkit-mask: url('{{ asset('assets/merchs/bag11.png') }}') no-repeat top / contain;
+                                                        mask: url('{{ asset('assets/merchs/bag11.png') }}') no-repeat top / contain;">
                     </div>
                     <div class="w-[52.5%] h-full z-[4] flex justify-center items-end product-item product-idle"
                         data-product="bag1">
@@ -384,8 +402,8 @@
                     {{-- shadow Bag2 --}}
                     <div class="w-[47.5%] top-0 left-[17.5%] absolute h-full z-[2] flex justify-center items-center bg-[#7F5537]"
                         style="
-                                                -webkit-mask: url('{{ asset('assets/merchs/bag21.png') }}') no-repeat top / contain;
-                                                mask: url('{{ asset('assets/merchs/bag21.png') }}') no-repeat top / contain;">
+                                                        -webkit-mask: url('{{ asset('assets/merchs/bag21.png') }}') no-repeat top / contain;
+                                                        mask: url('{{ asset('assets/merchs/bag21.png') }}') no-repeat top / contain;">
                     </div>
                 </div>
             </div>
@@ -394,24 +412,24 @@
                 {{-- Replace the existing buyHere button section with this more responsive version --}}
 
                 <div class="absolute bottom-0 right-0 z-10 w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[400px] 
-                                    h-auto flex justify-end items-end p-2 sm:p-4">
+                                            h-auto flex justify-end items-end p-2 sm:p-4">
 
                     {{-- Buy Here Button - More Responsive Version --}}
                     <button id="buyHere" onclick="window.location.href = 'https://forms.gle/Y388qsN1KUVPxA1s6'" class="relative z-[9] mb-4 mr-2 sm:mb-6 sm:mr-4 lg:mb-8 lg:mr-6
-                                       cursor-pointer flex justify-center items-center 
-                                       font-secondary font-bold uppercase 
-                                       text-[#fff]
-                                       px-3 sm:px-4 sm:py-2 lg:px-6 lg:py-2.5
-                                       transition-all duration-300 ease-out 
-                                       text-sm sm:text-base lg:text-lg xl:text-xl
-                                       focus:outline-none
-                                       min-w-[80px] sm:min-w-[100px] lg:min-w-[120px]
-                                       whitespace-nowrap">
+                                               cursor-pointer flex justify-center items-center 
+                                               font-secondary font-bold uppercase 
+                                               text-[#fff]
+                                               px-3 sm:px-4 sm:py-2 lg:px-6 lg:py-2.5
+                                               transition-all duration-300 ease-out 
+                                               text-sm sm:text-base lg:text-lg xl:text-xl
+                                               focus:outline-none
+                                               min-w-[80px] sm:min-w-[100px] lg:min-w-[120px]
+                                               whitespace-nowrap">
                         <span class="relative z-10">BUY HERE</span>
                     </button>
 
                     <img src="{{ asset('assets/merchs/priceList.png') }}" class="w-full max-w-[200px] sm:max-w-[250px] lg:max-w-[300px] 
-                                        h-auto object-contain" alt="Products Price List">
+                                                h-auto object-contain" alt="Products Price List">
                 </div>
 
                 <style>
@@ -539,7 +557,7 @@
                     class="w-full z-[10] h-full cursor-pointer  object-fill" alt="Products Price List">
             </div>
         </div>
-       
+
     </div>
 
 
@@ -750,13 +768,13 @@
                 }
             });
 
-            
+
         }
     </script>
-    
+
 @endsection
 
-        <!-- Price List Modal -->
+<!-- Price List Modal -->
 <div id="priceListModal"
     class="fixed inset-0 z-[9999] hidden isolate bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="relative w-full h-full flex items-center justify-center">
@@ -767,8 +785,7 @@
             </svg>
         </button>
 
-        <img src="{{ asset('assets/merchs/priceList.png') }}" 
-            class="max-w-full max-h-full object-contain z-[9999]"
+        <img src="{{ asset('assets/merchs/priceList.png') }}" class="max-w-full max-h-full object-contain z-[9999]"
             alt="Products Price List - Full View">
     </div>
 </div>
